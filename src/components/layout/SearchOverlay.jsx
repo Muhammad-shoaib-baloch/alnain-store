@@ -7,7 +7,7 @@ import { useDebounce, useLockBodyScroll } from '@/hooks'
 import { formatPrice } from '@/lib/format'
 import SmartImage from '@/components/ui/SmartImage'
 
-const POPULAR = ['Embroidered Dobby', 'Printed Khaddar', 'Co-ord', 'Kurta', 'Festive', 'Chikankari']
+const POPULAR = ['Chikankari', 'Printed Lawn', '2 Piece', '3 Piece', 'Floral', 'Maroon']
 
 export default function SearchOverlay({ open, onClose }) {
   const [q, setQ] = useState('')

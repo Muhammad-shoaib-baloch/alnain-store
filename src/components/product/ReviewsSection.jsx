@@ -64,9 +64,11 @@ export default function ReviewsSection({ product, onSubmitted }) {
       {/* summary */}
       <div>
         <div className="card p-6 text-center">
-          <p className="font-display text-5xl">{Number(summary.avg).toFixed(1)}</p>
-          <RatingStars value={summary.avg} size={18} className="mt-2 justify-center" />
-          <p className="mt-1.5 text-xs text-smoke">Based on {summary.count} ratings</p>
+          <p className="font-display text-5xl">{summary.count > 0 ? Number(summary.avg).toFixed(1) : '—'}</p>
+          <RatingStars value={summary.count > 0 ? summary.avg : 0} size={18} className="mt-2 justify-center" />
+          <p className="mt-1.5 text-xs text-smoke">
+            {summary.count > 0 ? `Based on ${summary.count} ratings` : 'No reviews yet'}
+          </p>
           <div className="mt-5 space-y-1.5 text-left">
             {[5, 4, 3, 2, 1].map((star) => {
               const total = Math.max(summary.written, 1)

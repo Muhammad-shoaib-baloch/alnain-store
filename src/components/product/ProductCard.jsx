@@ -61,10 +61,12 @@ export default function ProductCard({ product, view = 'grid' }) {
           <Link to={`/product/${product.slug}`} className="mt-1 font-display text-lg leading-snug hover:text-gold-700">
             {product.name}
           </Link>
-          <div className="mt-1.5 flex items-center gap-2">
-            <RatingStars value={product.rating} />
-            <span className="text-xs text-smoke">({product.reviewCount})</span>
-          </div>
+          {product.reviewCount > 0 && (
+            <div className="mt-1.5 flex items-center gap-2">
+              <RatingStars value={product.rating} />
+              <span className="text-xs text-smoke">({product.reviewCount})</span>
+            </div>
+          )}
           <p className="mt-2 hidden text-sm leading-relaxed text-smoke sm:line-clamp-2">{product.shortDescription}</p>
           <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-3">
             {priceBlock}
@@ -151,10 +153,12 @@ export default function ProductCard({ product, view = 'grid' }) {
         <Link to={`/product/${product.slug}`} className="mt-1 block truncate font-medium text-[15px] leading-snug transition-colors hover:text-gold-700">
           {product.name}
         </Link>
-        <div className="mt-1 flex items-center gap-1.5">
-          <RatingStars value={product.rating} size={12} />
-          <span className="text-[11px] text-smoke">({product.reviewCount})</span>
-        </div>
+        {product.reviewCount > 0 && (
+          <div className="mt-1 flex items-center gap-1.5">
+            <RatingStars value={product.rating} size={12} />
+            <span className="text-[11px] text-smoke">({product.reviewCount})</span>
+          </div>
+        )}
         <div className="mt-1.5">{priceBlock}</div>
         <div className="mt-2 flex items-center justify-between">
           {colors.length > 0 && (

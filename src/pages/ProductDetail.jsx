@@ -135,8 +135,14 @@ export default function ProductDetail() {
 
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1">
             <button onClick={() => setTab('reviews')} className="flex items-center gap-2">
-              <RatingStars value={summary.avg} />
-              <span className="text-xs text-smoke underline-offset-2 hover:underline">{summary.count} reviews</span>
+              {summary.count > 0 ? (
+                <>
+                  <RatingStars value={summary.avg} />
+                  <span className="text-xs text-smoke underline-offset-2 hover:underline">{summary.count} reviews</span>
+                </>
+              ) : (
+                <span className="text-xs text-gold-700 underline-offset-2 hover:underline">Be the first to review</span>
+              )}
             </button>
             <span className="text-xs text-smoke">
               SKU: <span className="font-medium text-ink">{variant?.sku || product.sku}</span>

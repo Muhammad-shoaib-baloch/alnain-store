@@ -19,7 +19,7 @@ function CategorySplit() {
       <SectionHeading
         eyebrow="Our Signature Lines"
         title="Shop by Category"
-        sub="Two fabrics, one atelier — hand-embroidered dobby and digitally printed khaddar."
+        sub="Ready-to-wear elegance — chikankari 2 piece sets and complete printed lawn 3 piece suits."
         action={{ label: 'Shop All', to: '/shop' }}
       />
       <div className="grid gap-4 sm:grid-cols-2 lg:gap-6">
@@ -33,7 +33,7 @@ function CategorySplit() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/10 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
               <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-200">
-                {countProductsInCategory(cat.slug)} pieces
+                {countProductsInCategory(cat.slug)} {countProductsInCategory(cat.slug) === 1 ? 'style' : 'styles'}
               </p>
               <h3 className="mt-1 font-display text-3xl text-ivory lg:text-4xl">{cat.name}</h3>
               <p className="mt-1 max-w-sm text-sm text-ivory/70">{cat.description}</p>

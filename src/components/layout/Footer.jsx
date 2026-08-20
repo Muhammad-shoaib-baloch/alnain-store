@@ -9,8 +9,8 @@ import Logo from '@/components/common/Logo'
 
 const SHOP_LINKS = [
   { label: 'Shop All', to: '/shop' },
-  { label: 'Embroidered Dobby', to: '/shop/embroidered-dobby' },
-  { label: 'Digital Printed Khaddar', to: '/shop/digital-printed-khaddar' },
+  { label: '2 Piece', to: '/shop/2-piece' },
+  { label: '3 Piece', to: '/shop/3-piece' },
   { label: 'Collections', to: '/collections' },
   { label: 'Best Sellers', to: '/collections/best-sellers' },
 ]
@@ -69,8 +69,8 @@ export default function Footer() {
           <Logo onDark size="lg" className="-ml-1" />
           <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-gold-200">{general.tagline}</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/60">
-            Premium traditional wear crafted in Pakistan — embroidered dobby and digital printed khaddar suits,
-            co-ords and festive pieces.
+            Premium ready-to-wear crafted in Pakistan — chikankari kurtas and signature printed lawn suits,
+            delivered nationwide with cash on delivery.
           </p>
           <ul className="mt-5 space-y-2 text-sm text-ivory/60">
             <li className="flex items-start gap-2.5">

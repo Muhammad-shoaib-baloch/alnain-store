@@ -9,7 +9,7 @@ import { buildSeed } from '@/data/seed'
 import { api } from './api'
 
 const KEY = 'alnain_db'
-const SEED_VERSION = 4
+const SEED_VERSION = 5
 
 let cache = null
 let live = false

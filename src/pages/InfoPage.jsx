@@ -38,7 +38,7 @@ const FAQS = [
   ['How does Cash on Delivery work?', 'Place your order and pay the rider in cash when it arrives at your doorstep. COD is available across Pakistan with no extra fee. Please keep the exact amount ready.'],
   ['How long does delivery take?', 'Standard delivery takes 3–5 working days; express delivery takes 1–2 working days. Orders are dispatched from our Islamabad atelier Monday to Saturday.'],
   ['What is your exchange & return policy?', 'Unworn items with original tags can be returned or exchanged within 7 days of delivery. Heavily embellished formals are exchange-only for hygiene and quality reasons.'],
-  ['Do your suits come stitched or unstitched?', 'All Al Nain pieces — embroidered dobby and digital printed khaddar — come stitched to standard sizes (see the Size Guide).'],
+  ['Do your suits come stitched or unstitched?', 'All Al Nain pieces — chikankari 2 piece and printed lawn 3 piece — come stitched to standard sizes (see the Size Guide).'],
   ['How do I track my order?', 'Once dispatched, you receive an SMS and email with the courier tracking number. Signed-in customers can also track orders from My Account → Orders.'],
   ['Can I change or cancel my order?', 'Orders can be modified or cancelled while they are still in "Pending" or "Confirmed" status — sign in and open the order, or WhatsApp our support team.'],
 ]
