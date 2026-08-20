@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import { Eye, EyeOff, LogIn, Sparkles } from 'lucide-react'
+import { Eye, EyeOff, LogIn } from 'lucide-react'
 import { Input, Field } from '@/components/ui/Field'
 import { useAuth } from '@/context/AuthContext'
 import { useToast } from '@/context/ToastContext'
@@ -95,23 +95,6 @@ export default function Login() {
           </p>
         </div>
 
-        {/* demo access */}
-        <div className="mt-4 border border-dashed border-gold-500/50 bg-gold-50 p-5">
-          <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold-700">
-            <Sparkles size={13} /> Demo Access
-          </p>
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            <button onClick={(e) => submit(e, { email: 'admin@alnain.pk', password: 'admin123' })} className="btn-outline btn-sm">
-              Login as Admin
-            </button>
-            <button onClick={(e) => submit(e, { email: 'sara@example.com', password: 'customer123' })} className="btn-outline btn-sm">
-              Login as Customer
-            </button>
-          </div>
-          <p className="mt-3 text-[11px] leading-relaxed text-smoke">
-            Admin: admin@alnain.pk / admin123 · Customer: sara@example.com / customer123
-          </p>
-        </div>
       </div>
     </div>
   )

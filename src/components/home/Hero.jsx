@@ -70,7 +70,7 @@ export default function Hero() {
               <div className={cn('relative max-w-xl pb-10', i === safeIndex && 'animate-fadeUp')}>
                 <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-200">
                   <span className="h-px w-10 bg-gold-400/70" />
-                  {storeName} · Est. Lahore
+                  {storeName} · Est. Islamabad
                 </p>
                 <h1 className="font-display text-4xl leading-[1.06] text-ivory text-balance sm:text-5xl lg:text-[64px]">
                   {banner.heading}

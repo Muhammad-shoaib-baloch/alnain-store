@@ -176,7 +176,7 @@ function buildProducts() {
       fabric: raw.fabric,
       shortDescription: raw.short,
       description: [
-        `${raw.name} is part of our ${catLabel} line — cut, finished and quality-checked in our Lahore atelier. ${raw.short}`,
+        `${raw.name} is part of our ${catLabel} line — cut, finished and quality-checked in our Islamabad atelier. ${raw.short}`,
         `The ${raw.fabric.toLowerCase()} fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.`,
         `Styling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.`,
       ].join('\n\n'),
@@ -186,7 +186,7 @@ function buildProducts() {
         raw.tags.includes('kurta') ? 'Includes: Kurta only' : 'Includes: Kurta and trouser (dupatta where pictured)',
         'Fit: True to size, tailored silhouette',
         'Care: Gentle machine wash inside-out; dry clean embellished pieces',
-        'Made in Pakistan — Al Nain atelier, Lahore',
+        'Made in Pakistan — Al Nain atelier, Islamabad',
       ],
       price: raw.price,
       salePrice: raw.sale,
@@ -367,7 +367,7 @@ const COUPONS = [
 
 // ---------------------------------------------------------------- banners
 const BANNERS = [
-  { id: 'bn-1', placement: 'hero', heading: 'Heritage in Every Thread', description: 'Embroidered dobby and digital printed khaddar — crafted in Lahore, delivered nationwide with cash on delivery.', buttonText: 'Shop Now', buttonUrl: '/shop', secondaryText: 'Explore Collection', secondaryUrl: '/collections', image: PHOTOS.heroBanner, align: 'right', position: 1, startsAt: null, endsAt: null, active: true },
+  { id: 'bn-1', placement: 'hero', heading: 'Heritage in Every Thread', description: 'Embroidered dobby and digital printed khaddar — crafted in Islamabad, delivered nationwide with cash on delivery.', buttonText: 'Shop Now', buttonUrl: '/shop', secondaryText: 'Explore Collection', secondaryUrl: '/collections', image: PHOTOS.heroBanner, align: 'right', position: 1, startsAt: null, endsAt: null, active: true },
   { id: 'bn-2', placement: 'hero', heading: 'The Eid Edit', description: 'Zari, tilla and mirror work — set by hand for the days that matter.', buttonText: 'Shop The Edit', buttonUrl: '/collections/eid-edit', secondaryText: 'Shop All', secondaryUrl: '/shop', image: PHOTOS.maroon, align: 'left', position: 2, startsAt: null, endsAt: null, active: false },
   { id: 'bn-3', placement: 'promo', heading: 'The Embroidered Dobby Edit', description: 'Hand-embroidered maroon and gold on textured dobby weave — pieces made for the season’s evenings.', buttonText: 'Shop Embroidered Dobby', buttonUrl: `/shop/${DOBBY}`, secondaryText: '', secondaryUrl: '', image: PHOTOS.maroon, position: 1, startsAt: null, endsAt: null, active: true },
 ]
@@ -405,7 +405,7 @@ function buildSettings() {
       tagline: 'Heritage in Every Thread',
       email: 'info@alnain.pk',
       phone: '+92 300 1234567',
-      address: 'Shop 12, Liberty Market, Gulberg III, Lahore, Pakistan',
+      address: 'F-7 Markaz, Islamabad, Pakistan',
       announcement: 'Cash on Delivery nationwide · Free shipping on orders above Rs. 5,000',
       logo: '/images/logo.png',
       favicon: null,
@@ -441,7 +441,7 @@ export function buildSeed() {
   const products = buildProducts()
   const orders = buildOrders(products, settings)
   return {
-    version: 3,
+    version: 4,
     seededAt: new Date().toISOString(),
     settings,
     products,

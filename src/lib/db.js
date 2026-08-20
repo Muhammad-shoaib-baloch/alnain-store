@@ -6,7 +6,7 @@
 import { buildSeed } from '@/data/seed'
 
 const KEY = 'alnain_db'
-const SEED_VERSION = 3
+const SEED_VERSION = 4
 let cache = null
 const listeners = new Set()
 

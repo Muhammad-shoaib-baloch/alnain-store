@@ -15,7 +15,7 @@ export default function Collections() {
       <div className="mb-10 max-w-2xl">
         <h1 className="font-display text-3xl sm:text-4xl">Our Collections</h1>
         <p className="mt-3 text-sm leading-relaxed text-smoke">
-          Season edits, festive drops and heirloom pieces — every collection curated by our stylists in Lahore.
+          Season edits, festive drops and heirloom pieces — every collection curated by our stylists in Islamabad.
         </p>
       </div>
 

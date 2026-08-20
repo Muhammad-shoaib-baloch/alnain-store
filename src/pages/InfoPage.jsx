@@ -36,7 +36,7 @@ function ContactForm() {
 
 const FAQS = [
   ['How does Cash on Delivery work?', 'Place your order and pay the rider in cash when it arrives at your doorstep. COD is available across Pakistan with no extra fee. Please keep the exact amount ready.'],
-  ['How long does delivery take?', 'Standard delivery takes 3–5 working days; express delivery takes 1–2 working days. Orders are dispatched from our Lahore atelier Monday to Saturday.'],
+  ['How long does delivery take?', 'Standard delivery takes 3–5 working days; express delivery takes 1–2 working days. Orders are dispatched from our Islamabad atelier Monday to Saturday.'],
   ['What is your exchange & return policy?', 'Unworn items with original tags can be returned or exchanged within 7 days of delivery. Heavily embellished formals are exchange-only for hygiene and quality reasons.'],
   ['Do your suits come stitched or unstitched?', 'All Al Nain pieces — embroidered dobby and digital printed khaddar — come stitched to standard sizes (see the Size Guide).'],
   ['How do I track my order?', 'Once dispatched, you receive an SMS and email with the courier tracking number. Signed-in customers can also track orders from My Account → Orders.'],
@@ -55,7 +55,7 @@ export default function InfoPage() {
       body: (
         <div className="prose-sm max-w-3xl space-y-5 text-[15px] leading-relaxed text-ink/80">
           <p>
-            <strong>Al Nain</strong> began in a single tailoring room in Lahore's Liberty Market with one belief:
+            <strong>Al Nain</strong> began in a single tailoring room in Islamabad with one belief:
             traditional wear deserves the same obsession with cut, cloth and finish as any luxury house. Today our
             atelier brings together master karigars, pattern-makers and a quality team who inspect every piece twice
             before it ships.
@@ -63,7 +63,7 @@ export default function InfoPage() {
           <p>
             We work directly with certified Pakistani mills for our lawn, khaddar, raw silk and velvet, and our
             embellishment — kora, dabka, tilla, mirror and chikankari — is set by hand. Every collection is designed in
-            Lahore and made in Pakistan, honestly priced, and delivered nationwide with cash on delivery.
+            Islamabad and made in Pakistan, honestly priced, and delivered nationwide with cash on delivery.
           </p>
           <p>
             From everyday shalwar kameez to wedding sherwanis and bridal organza, our promise stays the same:

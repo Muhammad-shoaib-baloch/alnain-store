@@ -255,7 +255,7 @@ export default function ProductDetail() {
             <div className="max-w-2xl space-y-4 text-sm leading-relaxed text-ink/80 animate-fadeIn">
               <p>
                 <strong>Shipping.</strong> Standard delivery takes 3–5 working days (free over {formatPrice(freeThreshold)}),
-                express delivery 1–2 working days. Orders are dispatched from Lahore Monday–Saturday.
+                express delivery 1–2 working days. Orders are dispatched from Islamabad Monday–Saturday.
               </p>
               <p>
                 <strong>Cash on Delivery.</strong> Pay in cash when your order arrives — available across Pakistan.
