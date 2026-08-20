@@ -8,7 +8,6 @@ import CartSummary from '@/components/cart/CartSummary'
 import { useCart } from '@/context/CartContext'
 import { useWishlist } from '@/context/WishlistContext'
 import { useToast } from '@/context/ToastContext'
-import { useSettings } from '@/context/SettingsContext'
 import { usePageTitle } from '@/hooks'
 import { formatPrice } from '@/lib/format'
 
@@ -68,8 +67,6 @@ function CartRow({ line }) {
 export default function Cart() {
   usePageTitle('Shopping Cart')
   const { detailed, count } = useCart()
-  const { settings } = useSettings()
-  const freeThreshold = settings?.shipping?.freeShippingThreshold || 15000
 
   if (!detailed.length) {
     return (
@@ -102,7 +99,7 @@ export default function Cart() {
         </div>
 
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <CartSummary footnote={`Standard shipping shown — final shipping is chosen at checkout. Free standard shipping over ${formatPrice(freeThreshold)}.`}>
+          <CartSummary footnote="Standard shipping shown — you can switch to express delivery at checkout.">
             <Link to="/checkout" className="btn-primary w-full">
               Proceed to Checkout <ArrowRight size={15} />
             </Link>

@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, ChevronLeft, ChevronRight, Banknote, Truck, RotateCcw } from 'lucide-react'
+import { ArrowRight, ChevronLeft, ChevronRight, Banknote, RotateCcw, Truck } from 'lucide-react'
 import SmartImage from '@/components/ui/SmartImage'
-import { cn, formatPrice } from '@/lib/format'
+import { cn } from '@/lib/format'
 import { getBanners } from '@/services/marketing'
 import { useSettings } from '@/context/SettingsContext'
 
 /**
  * Full-bleed hero driven by admin-managed banners (placement: hero).
- * Designed layer-by-layer: banner artwork → gradient scrim → thin gold frame →
- * faint Arabic wordmark → eyebrow with gold rules → serif headline → CTAs →
- * trust chips. Each banner can set `align: 'left' | 'right'`.
+ * Desktop shows `image` (wide artwork); mobile prefers `mobileImage`
+ * (portrait) so nothing crops badly. Content bottom-anchors on phones.
  */
 export default function Hero() {
   const { settings } = useSettings()
@@ -25,34 +24,40 @@ export default function Hero() {
 
   if (!banners.length) return null
   const safeIndex = index % banners.length
-  const freeThreshold = settings?.shipping?.freeShippingThreshold || 5000
   const storeName = settings?.general?.storeName || 'Al Nain'
 
   const TRUST = [
     { icon: Banknote, label: 'Cash on Delivery' },
-    { icon: Truck, label: `Free shipping over ${formatPrice(freeThreshold)}` },
+    { icon: Truck, label: 'Nationwide Delivery' },
     { icon: RotateCcw, label: '7-Day Easy Returns' },
   ]
 
   return (
-    <section className="relative h-[74vh] min-h-[500px] max-h-[760px] overflow-hidden bg-ink">
+    <section className="relative h-[78vh] min-h-[520px] max-h-[700px] overflow-hidden bg-ink sm:h-[74vh] sm:min-h-[500px] sm:max-h-[760px]">
       {banners.map((banner, i) => {
         const right = banner.align === 'right'
+        const mobileSrc = banner.mobileImage || banner.image
         return (
           <div
             key={banner.id}
             className={cn('absolute inset-0 transition-opacity duration-1000', i === safeIndex ? 'opacity-100' : 'opacity-0 pointer-events-none')}
           >
-            {/* artwork */}
+            {/* artwork — portrait on phones, wide on larger screens */}
+            <SmartImage
+              src={mobileSrc}
+              alt={banner.heading}
+              eager={i === 0}
+              className={cn('h-full w-full object-cover object-top sm:hidden', i === safeIndex && 'animate-kenburns')}
+            />
             <SmartImage
               src={banner.image}
               alt={banner.heading}
               eager={i === 0}
-              className={cn('h-full w-full object-cover', right ? 'object-left' : 'object-center', i === safeIndex && 'animate-kenburns')}
+              className={cn('hidden h-full w-full object-cover sm:block', right ? 'object-left' : 'object-center', i === safeIndex && 'animate-kenburns')}
             />
             {/* scrims */}
-            <div className={cn('absolute inset-0', right ? 'bg-gradient-to-l from-ink/90 via-ink/35 to-ink/10' : 'bg-gradient-to-r from-ink/90 via-ink/40 to-ink/10')} />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/25" />
+            <div className={cn('absolute inset-0 hidden sm:block', right ? 'bg-gradient-to-l from-ink/90 via-ink/35 to-ink/10' : 'bg-gradient-to-r from-ink/90 via-ink/40 to-ink/10')} />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-ink/20 sm:from-ink/70 sm:via-transparent sm:to-ink/25" />
 
             {/* faint Arabic wordmark behind the content */}
             <span
@@ -65,36 +70,36 @@ export default function Hero() {
               النين
             </span>
 
-            {/* content */}
-            <div className={cn('container-x absolute inset-0 flex items-center', right && 'justify-end')}>
-              <div className={cn('relative max-w-xl pb-10', i === safeIndex && 'animate-fadeUp')}>
-                <p className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-gold-200">
-                  <span className="h-px w-10 bg-gold-400/70" />
+            {/* content — bottom-anchored on phones, centered on larger screens */}
+            <div className={cn('container-x absolute inset-0 flex items-end pb-14 sm:items-center sm:pb-0', right && 'sm:justify-end')}>
+              <div className={cn('max-w-xl sm:pb-10', i === safeIndex && 'animate-fadeUp')}>
+                <p className="mb-3 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-200 sm:mb-4 sm:text-[11px]">
+                  <span className="h-px w-8 bg-gold-400/70 sm:w-10" />
                   {storeName} · Est. Islamabad
                 </p>
-                <h1 className="font-display text-4xl leading-[1.06] text-ivory text-balance sm:text-5xl lg:text-[64px]">
+                <h1 className="font-display text-[34px] leading-[1.08] text-ivory text-balance sm:text-5xl lg:text-[64px]">
                   {banner.heading}
                 </h1>
-                <p className="mt-5 max-w-md text-sm leading-relaxed text-ivory/80 sm:text-base">{banner.description}</p>
+                <p className="mt-3 max-w-md text-[13px] leading-relaxed text-ivory/85 sm:mt-5 sm:text-base">{banner.description}</p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
                   {banner.buttonText && (
-                    <Link to={banner.buttonUrl || '/shop'} className="btn bg-gold-500 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lift hover:bg-gold-400">
+                    <Link to={banner.buttonUrl || '/shop'} className="btn bg-gold-500 px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-white shadow-lift hover:bg-gold-400 sm:px-7 sm:py-3.5">
                       {banner.buttonText} <ArrowRight size={15} />
                     </Link>
                   )}
                   {banner.secondaryText && (
-                    <Link to={banner.secondaryUrl || '/collections'} className="btn-outline-light px-7 py-3.5 text-xs font-bold uppercase tracking-[0.16em] backdrop-blur-[2px]">
+                    <Link to={banner.secondaryUrl || '/collections'} className="btn-outline-light px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] backdrop-blur-[2px] sm:px-7 sm:py-3.5">
                       {banner.secondaryText}
                     </Link>
                   )}
                 </div>
 
                 {/* trust chips */}
-                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-ivory/15 pt-5">
+                <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-ivory/15 pt-4 sm:mt-8 sm:gap-x-6 sm:pt-5">
                   {TRUST.map(({ icon: Icon, label }) => (
-                    <span key={label} className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-ivory/75">
-                      <Icon size={14} className="text-gold-300" /> {label}
+                    <span key={label} className="flex items-center gap-2 text-[10px] font-medium uppercase tracking-wider text-ivory/80 sm:text-[11px]">
+                      <Icon size={13} className="text-gold-300" /> {label}
                     </span>
                   ))}
                 </div>
@@ -115,7 +120,7 @@ export default function Hero() {
       {/* slider controls */}
       {banners.length > 1 && (
         <>
-          <div className="absolute bottom-7 left-1/2 z-10 flex -translate-x-1/2 gap-2.5">
+          <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-2.5 sm:bottom-7">
             {banners.map((_, i) => (
               <button
                 key={i}

@@ -277,7 +277,7 @@ const COUPONS = [
 
 // ---------------------------------------------------------------- banners
 const BANNERS = [
-  { id: 'bn-1', placement: 'hero', heading: 'Heritage in Every Thread', description: 'Chikankari and signature printed lawn — stitched 2 & 3 piece suits, delivered across Pakistan with Cash on Delivery.', buttonText: 'Shop Now', buttonUrl: '/shop', secondaryText: '3 Piece Collection', secondaryUrl: '/shop/3-piece', image: PHOTOS.heroBanner, align: 'right', position: 1, startsAt: null, endsAt: null, active: true },
+  { id: 'bn-1', placement: 'hero', heading: 'Heritage in Every Thread', description: 'Chikankari and signature printed lawn — stitched 2 & 3 piece suits, delivered across Pakistan with Cash on Delivery.', buttonText: 'Shop Now', buttonUrl: '/shop', secondaryText: '3 Piece Collection', secondaryUrl: '/shop/3-piece', image: PHOTOS.heroBanner, mobileImage: PHOTOS.p(2), align: 'right', position: 1, startsAt: null, endsAt: null, active: true },
   { id: 'bn-2', placement: 'promo', heading: 'The Chikankari Edit', description: 'All-over chikankari embroidered kameez with a coordinating printed trouser — elegant, breathable, ready to wear. Only Rs. 4,000.', buttonText: 'Shop 2 Piece', buttonUrl: '/shop/2-piece', secondaryText: '', secondaryUrl: '', image: PHOTOS.p(9), position: 1, startsAt: null, endsAt: null, active: true },
 ]
 
@@ -308,7 +308,7 @@ function buildSettings() {
       email: 'info@alnain.pk',
       phone: '+92 340 9421907',
       address: 'Islamabad, Pakistan',
-      announcement: 'Cash on Delivery nationwide · Free shipping on orders above Rs. 5,000',
+      announcement: 'Cash on Delivery Nationwide · Premium Stitched Ready-to-Wear',
       logo: '/images/logo.png',
       favicon: null,
     },
@@ -318,7 +318,7 @@ function buildSettings() {
         { id: 'standard', label: 'Standard Delivery', eta: '3–5 working days', fee: 250, enabled: true },
         { id: 'express', label: 'Express Delivery', eta: '1–2 working days', fee: 500, enabled: true },
       ],
-      freeShippingThreshold: 5000,
+      freeShippingThreshold: 0,
     },
     tax: { enabled: false, rate: 0, label: 'GST' },
     payments: [

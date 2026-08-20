@@ -192,7 +192,7 @@ export default function Checkout() {
                 </label>
               ))}
               <p className="text-xs text-smoke">
-                Standard shipping is free on orders above {formatPrice(settings?.shipping?.freeShippingThreshold || 15000)}.
+                Orders placed before 2pm are dispatched the same working day.
               </p>
             </div>
           </section>

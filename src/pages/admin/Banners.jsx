@@ -23,6 +23,7 @@ const BLANK = {
   secondaryText: '',
   secondaryUrl: '',
   image: null,
+  mobileImage: null,
   position: 1,
   startsAt: '',
   endsAt: '',
@@ -133,8 +134,13 @@ export default function AdminBanners() {
         {editing && (
           <form onSubmit={save} className="space-y-4 px-5 py-5">
             <div>
-              <p className="label">Banner image</p>
+              <p className="label">Banner image (desktop — wide)</p>
               <ImageUploader images={editing.image ? [editing.image] : []} onChange={(imgs) => setEditing((b) => ({ ...b, image: imgs[imgs.length - 1] || null }))} max={1} />
+            </div>
+            <div>
+              <p className="label">Mobile image (portrait — optional)</p>
+              <ImageUploader images={editing.mobileImage ? [editing.mobileImage] : []} onChange={(imgs) => setEditing((b) => ({ ...b, mobileImage: imgs[imgs.length - 1] || null }))} max={1} />
+              <p className="mt-1 text-xs text-smoke">Phones show this instead of the wide image, so nothing crops badly.</p>
             </div>
             <Input label="Heading" required value={editing.heading} onChange={(e) => setEditing((b) => ({ ...b, heading: e.target.value }))} />
             <Textarea label="Description" rows={2} value={editing.description} onChange={(e) => setEditing((b) => ({ ...b, description: e.target.value }))} />

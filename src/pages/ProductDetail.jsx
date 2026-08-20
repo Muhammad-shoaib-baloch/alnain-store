@@ -35,7 +35,7 @@ export default function ProductDetail() {
   const { add } = useCart()
   const wishlist = useWishlist()
   const toast = useToast()
-  const { settings, dbVersion } = useSettings()
+  const { dbVersion } = useSettings()
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const product = useMemo(() => getProductBySlug(slug), [slug, dbVersion])
@@ -83,7 +83,6 @@ export default function ProductDetail() {
     .map((id) => getProductById(id))
     .filter((p) => p && p.status === 'published')
     .slice(0, 4)
-  const freeThreshold = settings?.shipping?.freeShippingThreshold || 15000
 
   const handleAdd = () => {
     if (!variant) return toast('Please select all options first.', 'error')
@@ -209,8 +208,8 @@ export default function ProductDetail() {
             <li className="flex items-center gap-3">
               <Truck size={17} className="shrink-0 text-gold-600" />
               <span>
-                Free standard shipping over <span className="font-medium text-ink">{formatPrice(freeThreshold)}</span> ·
-                3–5 working days
+                Nationwide delivery — standard <span className="font-medium text-ink">3–5 days</span>, express{' '}
+                <span className="font-medium text-ink">1–2 days</span>
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -260,8 +259,8 @@ export default function ProductDetail() {
           {tab === 'shipping' && (
             <div className="max-w-2xl space-y-4 text-sm leading-relaxed text-ink/80 animate-fadeIn">
               <p>
-                <strong>Shipping.</strong> Standard delivery takes 3–5 working days (free over {formatPrice(freeThreshold)}),
-                express delivery 1–2 working days. Orders are dispatched from Islamabad Monday–Saturday.
+                <strong>Shipping.</strong> Standard delivery takes 3–5 working days, express delivery 1–2 working
+                days. Orders are dispatched from Islamabad Monday–Saturday.
               </p>
               <p>
                 <strong>Cash on Delivery.</strong> Pay in cash when your order arrives — available across Pakistan.

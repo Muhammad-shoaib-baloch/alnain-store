@@ -1,6 +1,6 @@
 {
  "version": 5,
- "seededAt": "2026-08-20T15:50:47.276Z",
+ "seededAt": "2026-08-20T17:03:49.455Z",
  "settings": {
   "general": {
    "storeName": "Al Nain",
@@ -8,7 +8,7 @@
    "email": "info@alnain.pk",
    "phone": "+92 340 9421907",
    "address": "Islamabad, Pakistan",
-   "announcement": "Cash on Delivery nationwide · Free shipping on orders above Rs. 5,000",
+   "announcement": "Cash on Delivery Nationwide · Premium Stitched Ready-to-Wear",
    "logo": "/images/logo.png",
    "favicon": null
   },
@@ -33,7 +33,7 @@
      "enabled": true
     }
    ],
-   "freeShippingThreshold": 5000
+   "freeShippingThreshold": 0
   },
   "tax": {
    "enabled": false,
@@ -205,8 +205,8 @@
     "metaTitle": "Magenta Chikankari Embroidered 2 Piece | Al Nain",
     "metaDescription": "All-over chikankari embroidered kameez in rich magenta, paired with a coordinating floral printed trouser."
    },
-   "createdAt": "2026-08-19T15:50:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T17:03:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p2",
@@ -336,8 +336,8 @@
     "metaTitle": "Ivory Booti Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Classic ivory kameez with navy floral booti print, finished with a contrast navy dupatta and off-white trouser."
    },
-   "createdAt": "2026-08-19T13:26:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T14:39:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p3",
@@ -468,8 +468,8 @@
     "metaTitle": "Scarlet Floral Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Vibrant scarlet lawn covered in lily blooms, with a matching printed dupatta and dyed trouser."
    },
-   "createdAt": "2026-08-19T11:02:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T12:15:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p4",
@@ -599,8 +599,8 @@
     "metaTitle": "Mint Floral Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Fresh sea-green lawn with delicate white florals, matching dupatta and dyed trouser — summer-perfect."
    },
-   "createdAt": "2026-08-19T08:38:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T09:51:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p5",
@@ -730,8 +730,8 @@
     "metaTitle": "Pistachio Rose Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Soft pistachio green lawn printed with vintage roses, paired with a printed dupatta and light trouser."
    },
-   "createdAt": "2026-08-19T06:14:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T07:27:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p6",
@@ -861,8 +861,8 @@
     "metaTitle": "Navy Bloom Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Deep navy lawn scattered with blue and gold blooms, with matching dupatta and navy trouser."
    },
-   "createdAt": "2026-08-19T03:50:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T05:03:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p7",
@@ -993,8 +993,8 @@
     "metaTitle": "Teal Blossom Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Rich teal lawn with white cherry blossoms, bordered hems, matching dupatta and dyed trouser."
    },
-   "createdAt": "2026-08-19T01:26:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T02:39:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p8",
@@ -1124,8 +1124,8 @@
     "metaTitle": "Maroon Jaal Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Traditional maroon jaal print in crisp white — full three-piece with printed trouser and dupatta."
    },
-   "createdAt": "2026-08-18T23:02:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-19T00:15:49.454Z",
+   "updatedAt": "2026-08-20T17:03:49.454Z"
   },
   {
    "id": "p9",
@@ -1256,8 +1256,8 @@
     "metaTitle": "Ice Blue Floral Printed Lawn 3 Piece | Al Nain",
     "metaDescription": "Watercolour aqua florals on ice-white lawn, with a geometric-border dupatta and mint trouser."
    },
-   "createdAt": "2026-08-18T20:38:47.276Z",
-   "updatedAt": "2026-08-20T15:50:47.276Z"
+   "createdAt": "2026-08-18T21:51:49.455Z",
+   "updatedAt": "2026-08-20T17:03:49.455Z"
   }
  ],
  "categories": [
@@ -1357,7 +1357,7 @@
    "phone": "+92 340 9421907",
    "password": "admin123",
    "status": "active",
-   "createdAt": "2026-08-19T15:50:47.273Z",
+   "createdAt": "2026-08-19T17:03:49.452Z",
    "avatar": null,
    "addresses": [],
    "wishlist": []
@@ -1373,8 +1373,8 @@
    "value": 10,
    "minOrder": 5000,
    "maxDiscount": 1500,
-   "startsAt": "2026-08-19T15:50:47.275Z",
-   "expiresAt": "2026-10-19T15:50:47.275Z",
+   "startsAt": "2026-08-19T17:03:49.453Z",
+   "expiresAt": "2026-10-19T17:03:49.453Z",
    "usageLimit": 500,
    "usedCount": 0,
    "perCustomerLimit": 2,
@@ -1389,8 +1389,8 @@
    "value": 500,
    "minOrder": 6000,
    "maxDiscount": null,
-   "startsAt": "2026-08-19T15:50:47.275Z",
-   "expiresAt": "2027-02-16T15:50:47.275Z",
+   "startsAt": "2026-08-19T17:03:49.453Z",
+   "expiresAt": "2027-02-16T17:03:49.453Z",
    "usageLimit": 1000,
    "usedCount": 0,
    "perCustomerLimit": 1,
@@ -1410,6 +1410,7 @@
    "secondaryText": "3 Piece Collection",
    "secondaryUrl": "/shop/3-piece",
    "image": "/images/hero-banner.png",
+   "mobileImage": "/images/products/p2.jpg",
    "align": "right",
    "position": 1,
    "startsAt": null,

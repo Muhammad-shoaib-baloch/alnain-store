@@ -109,7 +109,7 @@ export default function InfoPage() {
       body: (
         <div className="max-w-3xl space-y-5 text-[15px] leading-relaxed text-ink/80">
           <p><strong>Coverage.</strong> We deliver across Pakistan through trusted courier partners, with Cash on Delivery available on every order.</p>
-          <p><strong>Timelines.</strong> Standard delivery: 3–5 working days (Rs. 250, free above the free-shipping threshold shown at checkout). Express delivery: 1–2 working days (Rs. 600). Orders placed before 2pm are dispatched the same working day.</p>
+          <p><strong>Timelines.</strong> Standard delivery: 3–5 working days (Rs. 250). Express delivery: 1–2 working days (Rs. 500). Orders placed before 2pm are dispatched the same working day.</p>
           <p><strong>Tracking.</strong> You'll receive the courier tracking number by SMS and email as soon as your order leaves the atelier. Signed-in customers can also track from My Account → Orders.</p>
           <p><strong>Delays.</strong> During Eid and sale seasons, delivery may take 1–2 extra days — we appreciate your patience.</p>
         </div>

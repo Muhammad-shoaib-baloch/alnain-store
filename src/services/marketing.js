@@ -20,7 +20,11 @@ export function getBanners({ placement, activeOnly = false } = {}) {
 
 export async function saveBanner(data) {
   if (isLive()) {
-    const payload = { ...data, image: await materializeImage(data.image) }
+    const payload = {
+      ...data,
+      image: await materializeImage(data.image),
+      mobileImage: await materializeImage(data.mobileImage),
+    }
     await api('/admin/banners', { method: 'POST', body: payload })
     await rehydrate()
     return

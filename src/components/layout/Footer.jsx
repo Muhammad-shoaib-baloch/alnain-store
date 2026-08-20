@@ -47,7 +47,7 @@ export default function Footer() {
         <div className="container-x grid grid-cols-1 gap-6 py-8 sm:grid-cols-3">
           {[
             { icon: Banknote, title: 'Cash on Delivery', sub: 'Pay at your doorstep, nationwide' },
-            { icon: Truck, title: 'Free Shipping', sub: `On orders above Rs. ${(settings?.shipping?.freeShippingThreshold || 15000).toLocaleString()}` },
+            { icon: Truck, title: 'Nationwide Delivery', sub: 'Standard 3–5 days · Express 1–2 days' },
             { icon: ShieldCheck, title: '7-Day Returns', sub: 'Easy exchange & return policy' },
           ].map(({ icon: Icon, title, sub }) => (
             <div key={title} className="flex items-center gap-4">
