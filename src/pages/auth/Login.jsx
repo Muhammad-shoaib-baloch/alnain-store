@@ -19,7 +19,7 @@ export default function Login() {
   const [showPw, setShowPw] = useState(false)
   const [busy, setBusy] = useState(false)
 
-  const submit = (e, credentials) => {
+  const submit = async (e, credentials) => {
     e?.preventDefault()
     const data = credentials || form
     const errs = {}
@@ -29,16 +29,14 @@ export default function Login() {
     if (Object.keys(errs).length) return
 
     setBusy(true)
-    setTimeout(() => {
-      try {
-        const user = login(data.email, data.password)
-        toast(`Welcome back, ${user.name.split(' ')[0]}!`)
-        navigate(next || (user.role === 'admin' ? '/admin' : '/account'))
-      } catch (err) {
-        toast(err.message, 'error')
-        setBusy(false)
-      }
-    }, 400)
+    try {
+      const user = await login(data.email, data.password)
+      toast(`Welcome back, ${user.name.split(' ')[0]}!`)
+      navigate(next || (user.role === 'admin' ? '/admin' : '/account'))
+    } catch (err) {
+      toast(err.message, 'error')
+      setBusy(false)
+    }
   }
 
   return (
@@ -88,7 +86,7 @@ export default function Login() {
           </form>
 
           <p className="mt-6 text-center text-sm text-smoke">
-            New to Poshaak?{' '}
+            New to Al Nain?{' '}
             <Link to={`/register${next ? `?next=${encodeURIComponent(next)}` : ''}`} className="font-semibold text-gold-700 underline underline-offset-2">
               Create an account
             </Link>

@@ -10,15 +10,19 @@ export function CouponBox() {
   const toast = useToast()
   const [draft, setDraft] = useState('')
 
-  const apply = (e) => {
+  const apply = async (e) => {
     e.preventDefault()
     if (!draft.trim()) return
-    const result = applyCoupon(draft.trim())
-    if (result.ok) {
-      toast(`Coupon ${result.coupon.code} applied — you saved ${formatPrice(result.discount)}.`)
-      setDraft('')
-    } else {
-      toast(result.reason, 'error')
+    try {
+      const result = await applyCoupon(draft.trim())
+      if (result.ok) {
+        toast(`Coupon ${result.coupon?.code || draft.trim().toUpperCase()} applied — you saved ${formatPrice(result.discount)}.`)
+        setDraft('')
+      } else {
+        toast(result.reason, 'error')
+      }
+    } catch (err) {
+      toast(err.message, 'error')
     }
   }
 

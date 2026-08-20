@@ -41,8 +41,8 @@ export default function Header() {
   const categories = getCategories({ activeOnly: true }).filter((c) => !c.parentId)
   const collections = getCollections({ activeOnly: true })
 
-  const handleLogout = () => {
-    logout()
+  const handleLogout = async () => {
+    await logout()
     toast('You have been signed out.', 'info')
     navigate('/')
   }

@@ -1,4 +1,5 @@
-import { getDB, commit } from '@/lib/db'
+import { getDB, commit, notify, isLive, rehydrate } from '@/lib/db'
+import { api } from '@/lib/api'
 import { uid } from '@/lib/format'
 import { validateCoupon } from './coupons'
 import { getSettings } from './settings'
@@ -19,9 +20,20 @@ export function computeTotals({ subtotal, discount = 0, shippingMethod = 'standa
 
 /**
  * Places an order. Validates stock, applies coupon, decrements inventory.
+ * Live mode: the server is the authority (revalidates everything).
  * Throws Error with a friendly message on failure.
  */
-export function createOrder({ customer, address, shippingMethod, paymentMethod, items, couponCode, customerId }) {
+export async function createOrder({ customer, address, shippingMethod, paymentMethod, items, couponCode, customerId }) {
+  if (isLive()) {
+    const { order } = await api('/orders', {
+      method: 'POST',
+      body: { customer, address, shippingMethod, paymentMethod, items, couponCode },
+    })
+    const db = getDB()
+    db.orders = [order, ...db.orders]
+    notify()
+    return order
+  }
   const db = getDB()
   if (!items?.length) throw new Error('Your cart is empty.')
 
@@ -130,7 +142,12 @@ export function getOrder(idOrNumber) {
   return db.orders.find((o) => o.id === idOrNumber || o.number === idOrNumber) || null
 }
 
-export function updateOrder(id, patch, timelineLabel) {
+export async function updateOrder(id, patch, timelineLabel) {
+  if (isLive()) {
+    const { order } = await api(`/admin/orders/${id}`, { method: 'PATCH', body: { ...patch, timelineLabel } })
+    await rehydrate()
+    return order
+  }
   const db = getDB()
   const order = db.orders.find((o) => o.id === id)
   if (!order) return null
@@ -140,7 +157,12 @@ export function updateOrder(id, patch, timelineLabel) {
   return order
 }
 
-export function addOrderNote(id, text, by = 'Store Admin') {
+export async function addOrderNote(id, text, by = 'Store Admin') {
+  if (isLive()) {
+    const { order } = await api(`/admin/orders/${id}`, { method: 'PATCH', body: { note: text } })
+    await rehydrate()
+    return order
+  }
   const db = getDB()
   const order = db.orders.find((o) => o.id === id)
   if (!order) return
@@ -149,7 +171,14 @@ export function addOrderNote(id, text, by = 'Store Admin') {
   return order
 }
 
-export function cancelOrder(id, { restock = true, label = 'Order cancelled' } = {}) {
+export async function cancelOrder(id, { restock = true, label = 'Order cancelled', byStore = false } = {}) {
+  if (isLive()) {
+    const { order } = byStore
+      ? await api(`/admin/orders/${id}`, { method: 'PATCH', body: { cancel: true } })
+      : await api(`/orders/${id}/cancel`, { method: 'POST' })
+    await rehydrate()
+    return order
+  }
   const db = getDB()
   const order = db.orders.find((o) => o.id === id)
   if (!order) return

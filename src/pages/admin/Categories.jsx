@@ -26,12 +26,16 @@ export default function AdminCategories() {
   const tree = getCategories({ tree: true })
   const parents = getCategories().filter((c) => !c.parentId)
 
-  const save = (e) => {
+  const save = async (e) => {
     e?.preventDefault()
     if (editing.name.trim().length < 2) return toast('Category name is required.', 'error')
-    saveCategory({ ...editing, parentId: editing.parentId || null, slug: editing.slug || slugify(editing.name) })
-    toast(editing.id ? 'Category updated.' : 'Category created.')
-    setEditing(null)
+    try {
+      await saveCategory({ ...editing, parentId: editing.parentId || null, slug: editing.slug || slugify(editing.name) })
+      toast(editing.id ? 'Category updated.' : 'Category created.')
+      setEditing(null)
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const remove = async (cat) => {
@@ -43,7 +47,7 @@ export default function AdminCategories() {
         : 'This category has no products.',
     })
     if (!ok) return
-    deleteCategory(cat.id)
+    await deleteCategory(cat.id)
     toast('Category deleted.', 'info')
   }
 

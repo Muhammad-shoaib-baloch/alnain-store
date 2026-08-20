@@ -89,8 +89,8 @@ export default function AdminLayout() {
     messages: listMessages({ status: 'new' }).length,
   }
 
-  const handleLogout = () => {
-    logout()
+  const handleLogout = async () => {
+    await logout()
     toast('Signed out of admin.', 'info')
     navigate('/login')
   }

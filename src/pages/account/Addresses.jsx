@@ -21,19 +21,23 @@ export default function AccountAddresses() {
 
   const openNew = () => setEditing({ ...BLANK, name: user.name, phone: user.phone || '' })
 
-  const save = (e) => {
+  const save = async (e) => {
     e.preventDefault()
     if (!editing.name.trim() || !editing.city || editing.address.trim().length < 8)
       return toast('Please complete name, city and full address.', 'error')
-    if (editing.id) {
-      updateAddress(user.id, editing)
-      toast('Address updated.')
-    } else {
-      addAddress(user.id, editing)
-      toast('Address added.')
+    try {
+      if (editing.id) {
+        await updateAddress(user.id, editing)
+        toast('Address updated.')
+      } else {
+        await addAddress(user.id, editing)
+        toast('Address added.')
+      }
+      refresh()
+      setEditing(null)
+    } catch (err) {
+      toast(err.message, 'error')
     }
-    refresh()
-    setEditing(null)
   }
 
   const remove = async (addr) => {
@@ -42,13 +46,13 @@ export default function AccountAddresses() {
       message: `“${addr.label}” — ${addr.address}, ${addr.city}`,
     })
     if (!ok) return
-    deleteAddress(user.id, addr.id)
+    await deleteAddress(user.id, addr.id)
     refresh()
     toast('Address deleted.', 'info')
   }
 
-  const makeDefault = (addr) => {
-    setDefaultAddress(user.id, addr.id)
+  const makeDefault = async (addr) => {
+    await setDefaultAddress(user.id, addr.id)
     refresh()
     toast(`“${addr.label}” is now your default address.`)
   }

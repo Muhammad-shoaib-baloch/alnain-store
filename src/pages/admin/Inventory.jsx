@@ -24,10 +24,10 @@ export default function AdminInventory() {
     out: listInventory({ status: 'out-of-stock' }).length,
   }
 
-  const commit = (row) => {
+  const commit = async (row) => {
     const draft = drafts[row.variant.id]
     if (draft === undefined || Number(draft) === row.variant.stock) return
-    updateVariantStock(row.product.id, row.variant.id, Number(draft))
+    await updateVariantStock(row.product.id, row.variant.id, Number(draft))
     setDrafts((d) => {
       const next = { ...d }
       delete next[row.variant.id]

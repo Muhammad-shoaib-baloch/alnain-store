@@ -54,29 +54,29 @@ export default function AdminOrderDetail() {
         confirmText: 'Cancel Order',
       })
       if (!ok) return
-      cancelOrder(order.id, { label: 'Cancelled by store' })
+      await cancelOrder(order.id, { label: 'Cancelled by store', byStore: true })
       toast('Order cancelled and stock restored.', 'info')
       return
     }
-    updateOrder(order.id, { status }, STATUS_LABELS[status])
+    await updateOrder(order.id, { status }, STATUS_LABELS[status])
     toast(`Order status updated to “${status}”.`)
   }
 
-  const setPayment = (paymentStatus) => {
+  const setPayment = async (paymentStatus) => {
     if (paymentStatus === order.paymentStatus) return
-    updateOrder(order.id, { paymentStatus }, `Payment marked ${paymentStatus}`)
+    await updateOrder(order.id, { paymentStatus }, `Payment marked ${paymentStatus}`)
     toast(`Payment status: ${paymentStatus}.`)
   }
 
-  const saveTracking = () => {
-    updateOrder(order.id, { trackingNumber: tracking.trim() || null }, tracking.trim() ? `Tracking number added (${tracking.trim()})` : undefined)
+  const saveTracking = async () => {
+    await updateOrder(order.id, { trackingNumber: tracking.trim() || null }, tracking.trim() ? `Tracking number added (${tracking.trim()})` : undefined)
     toast('Tracking number saved.')
   }
 
-  const submitNote = (e) => {
+  const submitNote = async (e) => {
     e.preventDefault()
     if (!note.trim()) return
-    addOrderNote(order.id, note.trim())
+    await addOrderNote(order.id, note.trim())
     setNote('')
     toast('Internal note added.', 'info')
   }
@@ -88,7 +88,7 @@ export default function AdminOrderDetail() {
       confirmText: 'Refund',
     })
     if (!ok) return
-    updateOrder(order.id, { paymentStatus: 'refunded', status: 'returned' }, 'Order refunded')
+    await updateOrder(order.id, { paymentStatus: 'refunded', status: 'returned' }, 'Order refunded')
     toast('Order refunded.', 'info')
   }
 

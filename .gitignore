@@ -5,3 +5,7 @@ dist-ssr
 .DS_Store
 npm-debug.log*
 *.zip
+api/config.php
+api/dev.sqlite*
+api/.installed
+api/uploads/

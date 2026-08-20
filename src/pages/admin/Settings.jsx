@@ -7,8 +7,7 @@ import { Input, Textarea, Toggle } from '@/components/ui/Field'
 import { useToast } from '@/context/ToastContext'
 import { useConfirm } from '@/context/ConfirmContext'
 import { usePageTitle } from '@/hooks'
-import { getSettings, saveSettings } from '@/services/settings'
-import { resetDB } from '@/lib/db'
+import { getSettings, saveSettings, resetStore } from '@/services/settings'
 
 const TABS = [
   { id: 'general', label: 'General' },
@@ -55,21 +54,29 @@ export default function AdminSettings() {
   const [payments, setPayments] = useState(JSON.parse(JSON.stringify(settings.payments)))
   const [seo, setSeo] = useState({ ...settings.seo })
 
-  const save = (patch, message) => {
-    saveSettings(patch)
-    toast(message)
+  const save = async (patch, message) => {
+    try {
+      await saveSettings(patch)
+      toast(message)
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const resetDemo = async () => {
     const ok = await confirm({
-      title: 'Reset demo data?',
+      title: 'Reset store data?',
       message: 'All products, orders, customers and settings return to the original seed. This cannot be undone.',
       confirmText: 'Reset Everything',
     })
     if (!ok) return
-    resetDB()
-    toast('Demo data reset — reloading…', 'info')
-    setTimeout(() => window.location.reload(), 800)
+    try {
+      await resetStore()
+      toast('Store data reset — reloading…', 'info')
+      setTimeout(() => window.location.reload(), 800)
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const setMethod = (idx, patch) => {

@@ -1,13 +1,16 @@
-import { getDB, commit } from '@/lib/db'
+import { getDB, commit, notify, isLive, rehydrate } from '@/lib/db'
+import { api, setToken } from '@/lib/api'
 import { uid } from '@/lib/format'
 
-const SESSION_KEY = 'poshaak_session'
+const SESSION_KEY = 'poshaak_session' // demo mode only
 
 export function currentUser() {
+  const db = getDB()
+  if (isLive()) return db.me || null
   try {
     const id = localStorage.getItem(SESSION_KEY)
     if (!id) return null
-    const user = getDB().users.find((u) => u.id === id)
+    const user = db.users.find((u) => u.id === id)
     if (!user || user.status === 'disabled') return null
     return user
   } catch {
@@ -15,7 +18,14 @@ export function currentUser() {
   }
 }
 
-export function login(email, password) {
+export async function login(email, password) {
+  if (isLive()) {
+    const { token, user } = await api('/auth/login', { method: 'POST', body: { email, password } })
+    setToken(token)
+    await rehydrate()
+    getDB().me = user
+    return user
+  }
   const user = getDB().users.find((u) => u.email.toLowerCase() === String(email).toLowerCase())
   if (!user || user.password !== password) throw new Error('Invalid email or password.')
   if (user.status === 'disabled') throw new Error('This account has been disabled. Contact support.')
@@ -23,7 +33,14 @@ export function login(email, password) {
   return user
 }
 
-export function register({ name, email, phone, password }) {
+export async function register({ name, email, phone, password }) {
+  if (isLive()) {
+    const { token, user } = await api('/auth/register', { method: 'POST', body: { name, email, phone, password } })
+    setToken(token)
+    await rehydrate()
+    getDB().me = user
+    return user
+  }
   const db = getDB()
   if (db.users.some((u) => u.email.toLowerCase() === String(email).toLowerCase()))
     throw new Error('An account with this email already exists.')
@@ -46,11 +63,26 @@ export function register({ name, email, phone, password }) {
   return user
 }
 
-export function logout() {
+export async function logout() {
+  if (isLive()) {
+    setToken(null)
+    getDB().me = null
+    await rehydrate()
+    return
+  }
   localStorage.removeItem(SESSION_KEY)
 }
 
-export function updateUser(id, patch) {
+export async function updateUser(id, patch) {
+  if (isLive()) {
+    const me = getDB().me
+    const self = me && me.id === id
+    const { user } = await api(self ? '/auth/me' : `/admin/customers/${id}`, { method: 'PATCH', body: patch })
+    await rehydrate()
+    if (self) getDB().me = user
+    notify()
+    return user
+  }
   const db = getDB()
   const user = db.users.find((u) => u.id === id)
   if (!user) throw new Error('User not found.')
@@ -61,7 +93,11 @@ export function updateUser(id, patch) {
   return user
 }
 
-export function changePassword(id, current, next) {
+export async function changePassword(id, current, next) {
+  if (isLive()) {
+    await api('/auth/password', { method: 'POST', body: { current, next } })
+    return
+  }
   const user = getDB().users.find((u) => u.id === id)
   if (!user) throw new Error('User not found.')
   if (user.password !== current) throw new Error('Current password is incorrect.')
@@ -69,8 +105,10 @@ export function changePassword(id, current, next) {
   commit()
 }
 
-// mock password-reset flow (token kept in db.meta so it survives reload)
+// mock password-reset flow (demo only — live installs route through support)
 export function requestReset(email) {
+  if (isLive())
+    throw new Error('Password reset is handled by our support team — please WhatsApp or email us and we will reset it for you.')
   const db = getDB()
   const user = db.users.find((u) => u.email.toLowerCase() === String(email).toLowerCase())
   if (!user) throw new Error('No account found with this email.')
@@ -81,6 +119,7 @@ export function requestReset(email) {
 }
 
 export function resetPassword(token, password) {
+  if (isLive()) throw new Error('This reset link is invalid or has expired.')
   const db = getDB()
   const entry = db.meta.resetTokens?.[token]
   if (!entry || entry.expires < Date.now()) throw new Error('This reset link is invalid or has expired.')
@@ -93,47 +132,75 @@ export function resetPassword(token, password) {
 }
 
 // ------------------------------------------------------------- addresses
-export function addAddress(userId, address) {
-  const db = getDB()
-  const user = db.users.find((u) => u.id === userId)
-  if (!user) return
-  const isFirst = user.addresses.length === 0
-  const addr = { ...address, id: uid('a'), isDefault: address.isDefault || isFirst }
-  if (addr.isDefault) user.addresses.forEach((a) => (a.isDefault = false))
-  user.addresses.push(addr)
+const cloneAddresses = (user) => (user.addresses || []).map((a) => ({ ...a }))
+
+async function persistAddresses(userId, addresses) {
+  if (isLive()) {
+    const { user } = await api('/auth/me', { method: 'PATCH', body: { addresses } })
+    getDB().me = user
+    notify()
+    return
+  }
   commit()
+}
+
+export async function addAddress(userId, address) {
+  const user = isLive() ? getDB().me : getDB().users.find((u) => u.id === userId)
+  if (!user) return
+  const list = cloneAddresses(user)
+  const isFirst = list.length === 0
+  const addr = { ...address, id: uid('a'), isDefault: address.isDefault || isFirst }
+  if (addr.isDefault) list.forEach((a) => (a.isDefault = false))
+  list.push(addr)
+  user.addresses = list
+  await persistAddresses(userId, list)
   return addr
 }
 
-export function updateAddress(userId, address) {
-  const db = getDB()
-  const user = db.users.find((u) => u.id === userId)
-  const existing = user?.addresses.find((a) => a.id === address.id)
+export async function updateAddress(userId, address) {
+  const user = isLive() ? getDB().me : getDB().users.find((u) => u.id === userId)
+  if (!user) return
+  const list = cloneAddresses(user)
+  const existing = list.find((a) => a.id === address.id)
   if (!existing) return
-  if (address.isDefault) user.addresses.forEach((a) => (a.isDefault = false))
+  if (address.isDefault) list.forEach((a) => (a.isDefault = false))
   Object.assign(existing, address)
-  if (!user.addresses.some((a) => a.isDefault) && user.addresses.length) user.addresses[0].isDefault = true
-  commit()
+  if (!list.some((a) => a.isDefault) && list.length) list[0].isDefault = true
+  user.addresses = list
+  await persistAddresses(userId, list)
 }
 
-export function deleteAddress(userId, addressId) {
-  const db = getDB()
-  const user = db.users.find((u) => u.id === userId)
+export async function deleteAddress(userId, addressId) {
+  const user = isLive() ? getDB().me : getDB().users.find((u) => u.id === userId)
   if (!user) return
-  user.addresses = user.addresses.filter((a) => a.id !== addressId)
-  if (!user.addresses.some((a) => a.isDefault) && user.addresses.length) user.addresses[0].isDefault = true
-  commit()
+  const list = cloneAddresses(user).filter((a) => a.id !== addressId)
+  if (!list.some((a) => a.isDefault) && list.length) list[0].isDefault = true
+  user.addresses = list
+  await persistAddresses(userId, list)
 }
 
-export function setDefaultAddress(userId, addressId) {
-  const db = getDB()
-  const user = db.users.find((u) => u.id === userId)
+export async function setDefaultAddress(userId, addressId) {
+  const user = isLive() ? getDB().me : getDB().users.find((u) => u.id === userId)
   if (!user) return
-  user.addresses.forEach((a) => (a.isDefault = a.id === addressId))
-  commit()
+  const list = cloneAddresses(user)
+  list.forEach((a) => (a.isDefault = a.id === addressId))
+  user.addresses = list
+  await persistAddresses(userId, list)
 }
 
-export function setWishlist(userId, ids) {
+export async function setWishlist(userId, ids) {
+  if (isLive()) {
+    const me = getDB().me
+    if (!me || me.id !== userId) return
+    me.wishlist = ids
+    try {
+      const { user } = await api('/auth/me', { method: 'PATCH', body: { wishlist: ids } })
+      getDB().me = user
+    } catch {
+      /* non-critical */
+    }
+    return
+  }
   const db = getDB()
   const user = db.users.find((u) => u.id === userId)
   if (!user) return
@@ -168,7 +235,17 @@ export function listCustomers({ q, status, page = 1, perPage = 10 } = {}) {
   return { items: items.slice((safePage - 1) * perPage, safePage * perPage), total, page: safePage, pages }
 }
 
-export function setCustomerStatus(id, status) {
+export async function setCustomerStatus(id, status) {
+  if (isLive()) {
+    const me = getDB().me
+    if (me && me.id === id && status === 'disabled') {
+      await api('/auth/me', { method: 'PATCH', body: { status: 'disabled' } })
+    } else {
+      await api(`/admin/customers/${id}`, { method: 'PATCH', body: { status } })
+    }
+    await rehydrate()
+    return
+  }
   const db = getDB()
   const user = db.users.find((u) => u.id === id)
   if (user) {

@@ -60,12 +60,12 @@ export default function AdminCoupons() {
       expiresAt: toDateInput(c.expiresAt),
     })
 
-  const save = (e) => {
+  const save = async (e) => {
     e?.preventDefault()
     if (!editing.code.trim()) return toast('Coupon code is required.', 'error')
     if (!editing.value || Number(editing.value) <= 0) return toast('Enter a valid discount value.', 'error')
     try {
-      saveCoupon({
+      await saveCoupon({
         ...editing,
         value: Number(editing.value),
         minOrder: Number(editing.minOrder) || 0,
@@ -85,7 +85,7 @@ export default function AdminCoupons() {
   const remove = async (c) => {
     const ok = await confirm({ title: `Delete coupon ${c.code}?`, message: 'Customers will no longer be able to use it.' })
     if (!ok) return
-    deleteCoupon(c.id)
+    await deleteCoupon(c.id)
     toast('Coupon deleted.', 'info')
   }
 

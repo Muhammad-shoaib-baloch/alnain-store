@@ -48,8 +48,12 @@ export default function AccountOrderDetail() {
       confirmText: 'Cancel Order',
     })
     if (!ok) return
-    cancelOrder(order.id, { label: 'Cancelled by customer' })
-    toast('Your order has been cancelled.', 'info')
+    try {
+      await cancelOrder(order.id, { label: 'Cancelled by customer' })
+      toast('Your order has been cancelled.', 'info')
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   return (

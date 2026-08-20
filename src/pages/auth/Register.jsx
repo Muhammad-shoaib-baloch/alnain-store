@@ -20,7 +20,7 @@ export default function Register() {
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
     const errs = {}
     if (form.name.trim().length < 3) errs.name = 'Enter your full name.'
@@ -32,16 +32,14 @@ export default function Register() {
     if (Object.keys(errs).length) return
 
     setBusy(true)
-    setTimeout(() => {
-      try {
-        register({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), password: form.password })
-        toast('Welcome to Poshaak — your account is ready!')
-        navigate(next || '/account')
-      } catch (err) {
-        toast(err.message, 'error')
-        setBusy(false)
-      }
-    }, 400)
+    try {
+      await register({ name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), password: form.password })
+      toast('Welcome to Al Nain — your account is ready!')
+      navigate(next || '/account')
+    } catch (err) {
+      toast(err.message, 'error')
+      setBusy(false)
+    }
   }
 
   return (

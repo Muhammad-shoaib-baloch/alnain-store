@@ -40,14 +40,14 @@ export default function AdminCustomers() {
       })
       if (!ok) return
     }
-    setCustomerStatus(customer.id, disabling ? 'disabled' : 'active')
+    await setCustomerStatus(customer.id, disabling ? 'disabled' : 'active')
     toast(`Customer ${disabling ? 'disabled' : 're-activated'}.`, 'info')
   }
 
-  const saveEdit = (e) => {
+  const saveEdit = async (e) => {
     e.preventDefault()
     try {
-      updateUser(edit.id, { name: edit.name, email: edit.email, phone: edit.phone })
+      await updateUser(edit.id, { name: edit.name, email: edit.email, phone: edit.phone })
       toast('Customer updated.')
       setEdit(null)
     } catch (err) {

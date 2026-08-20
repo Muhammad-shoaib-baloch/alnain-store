@@ -29,10 +29,10 @@ export default function Footer() {
   const [email, setEmail] = useState('')
   const general = settings?.general || {}
 
-  const onSubscribe = (e) => {
+  const onSubscribe = async (e) => {
     e.preventDefault()
     try {
-      subscribeNewsletter(email)
+      await subscribeNewsletter(email)
       toast('Welcome to the list — you’ll hear from us soon.')
       setEmail('')
     } catch (err) {
@@ -154,7 +154,7 @@ export default function Footer() {
       <div className="border-t border-ivory/10">
         <div className="container-x flex flex-col items-center justify-between gap-3 py-5 text-xs text-ivory/45 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {general.storeName || 'Poshaak'}. All rights reserved.
+            © {new Date().getFullYear()} {general.storeName || 'Al Nain'}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
             <Link to="/privacy-policy" className="transition-colors hover:text-gold-200">

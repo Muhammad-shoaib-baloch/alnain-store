@@ -15,10 +15,10 @@ function ContactForm() {
   return (
     <form
       className="card space-y-4 p-6"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault()
         try {
-          submitContactMessage(form)
+          await submitContactMessage(form)
           toast('Message sent — our team will reply within 24 hours.')
           setForm({ name: '', email: '', message: '' })
         } catch (err) {

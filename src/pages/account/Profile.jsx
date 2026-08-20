@@ -26,12 +26,12 @@ export default function AccountProfile() {
     reader.readAsDataURL(file)
   }
 
-  const saveProfile = (e) => {
+  const saveProfile = async (e) => {
     e.preventDefault()
     if (form.name.trim().length < 3) return toast('Please enter your full name.', 'error')
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return toast('Enter a valid email address.', 'error')
     try {
-      updateUser(user.id, { name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), avatar })
+      await updateUser(user.id, { name: form.name.trim(), email: form.email.trim(), phone: form.phone.trim(), avatar })
       refresh()
       toast('Profile updated successfully.')
     } catch (err) {
@@ -39,12 +39,12 @@ export default function AccountProfile() {
     }
   }
 
-  const savePassword = (e) => {
+  const savePassword = async (e) => {
     e.preventDefault()
     if (pw.next.length < 6) return toast('New password must be at least 6 characters.', 'error')
     if (pw.next !== pw.confirm) return toast('New passwords do not match.', 'error')
     try {
-      changePassword(user.id, pw.current, pw.next)
+      await changePassword(user.id, pw.current, pw.next)
       setPw({ current: '', next: '', confirm: '' })
       toast('Password changed successfully.')
     } catch (err) {

@@ -29,7 +29,7 @@ export function WishlistProvider({ children }) {
     if (user) {
       const merged = [...new Set([...(user.wishlist || []), ...readGuest()])]
       setIds(merged)
-      setWishlist(user.id, merged)
+      Promise.resolve(setWishlist(user.id, merged)).catch(() => {})
       localStorage.removeItem(GUEST_KEY)
     } else {
       setIds(readGuest())
@@ -38,7 +38,7 @@ export function WishlistProvider({ children }) {
 
   const persist = useCallback(
     (next) => {
-      if (user) setWishlist(user.id, next)
+      if (user) Promise.resolve(setWishlist(user.id, next)).catch(() => {})
       else localStorage.setItem(GUEST_KEY, JSON.stringify(next))
     },
     [user]

@@ -1,4 +1,5 @@
-import { getDB, commit } from '@/lib/db'
+import { getDB, commit, isLive, rehydrate } from '@/lib/db'
+import { api, materializeImage, materializeImageList } from '@/lib/api'
 import { slugify, uid, pctOff } from '@/lib/format'
 import { SIZE_ORDER } from '@/lib/constants'
 
@@ -203,7 +204,17 @@ export function getFilterMeta() {
 }
 
 // ------------------------------------------------------------- product CRUD
-export function saveProduct(data) {
+export async function saveProduct(data) {
+  if (isLive()) {
+    const payload = { ...data }
+    payload.images = await materializeImageList(payload.images || [])
+    payload.variants = await Promise.all(
+      (payload.variants || []).map(async (v) => ({ ...v, image: await materializeImage(v.image) }))
+    )
+    const { product } = await api('/admin/products', { method: 'POST', body: payload })
+    await rehydrate()
+    return product
+  }
   const db = getDB()
   const existing = data.id ? db.products.find((p) => p.id === data.id) : null
   const slug = slugify(data.slug || data.name)
@@ -239,7 +250,12 @@ export function saveProduct(data) {
   return product
 }
 
-export function deleteProduct(id) {
+export async function deleteProduct(id) {
+  if (isLive()) {
+    await api(`/admin/products/${id}`, { method: 'DELETE' })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   db.products = db.products.filter((p) => p.id !== id)
   db.collections.forEach((c) => {
@@ -248,7 +264,12 @@ export function deleteProduct(id) {
   commit()
 }
 
-export function duplicateProduct(id) {
+export async function duplicateProduct(id) {
+  if (isLive()) {
+    const { product } = await api(`/admin/products/${id}/duplicate`, { method: 'POST' })
+    await rehydrate()
+    return product
+  }
   const db = getDB()
   const src = db.products.find((p) => p.id === id)
   if (!src) return null
@@ -290,7 +311,12 @@ export function listInventory({ q, status } = {}) {
   return out.sort((a, b) => a.variant.stock - b.variant.stock)
 }
 
-export function updateVariantStock(productId, variantId, stock) {
+export async function updateVariantStock(productId, variantId, stock) {
+  if (isLive()) {
+    await api('/admin/inventory', { method: 'PATCH', body: { productId, variantId, stock } })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   const p = db.products.find((x) => x.id === productId)
   const v = p?.variants.find((x) => x.id === variantId)
@@ -321,7 +347,13 @@ export function countProductsInCategory(slug) {
   return db.products.filter((p) => p.status === 'published' && family.includes(p.category)).length
 }
 
-export function saveCategory(data) {
+export async function saveCategory(data) {
+  if (isLive()) {
+    const payload = { ...data, image: await materializeImage(data.image) }
+    await api('/admin/categories', { method: 'POST', body: payload })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   if (data.id) {
     const existing = db.categories.find((c) => c.id === data.id)
@@ -340,7 +372,12 @@ export function saveCategory(data) {
   commit()
 }
 
-export function deleteCategory(id) {
+export async function deleteCategory(id) {
+  if (isLive()) {
+    await api(`/admin/categories/${id}`, { method: 'DELETE' })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   const cat = db.categories.find((c) => c.id === id)
   if (!cat) return
@@ -376,7 +413,13 @@ export function getCollectionProducts(slug) {
     .filter((p) => p && p.status === 'published')
 }
 
-export function saveCollection(data) {
+export async function saveCollection(data) {
+  if (isLive()) {
+    const payload = { ...data, image: await materializeImage(data.image) }
+    await api('/admin/collections', { method: 'POST', body: payload })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   if (data.id) {
     const existing = db.collections.find((c) => c.id === data.id)
@@ -406,7 +449,12 @@ export function saveCollection(data) {
   commit()
 }
 
-export function deleteCollection(id) {
+export async function deleteCollection(id) {
+  if (isLive()) {
+    await api(`/admin/collections/${id}`, { method: 'DELETE' })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   const col = db.collections.find((c) => c.id === id)
   if (!col) return

@@ -76,48 +76,46 @@ export default function Checkout() {
     return Object.keys(e).length === 0
   }
 
-  const placeOrder = () => {
+  const placeOrder = async () => {
     if (!validate()) {
       toast('Please fix the highlighted fields.', 'error')
       window.scrollTo({ top: 0, behavior: 'smooth' })
       return
     }
     setPlacing(true)
-    setTimeout(() => {
-      try {
-        const order = createOrder({
-          customer: { firstName: form.firstName, lastName: form.lastName, email: form.email, phone: form.phone },
-          address: {
-            name: `${form.firstName} ${form.lastName}`,
-            phone: form.phone,
-            country: form.country,
-            city: form.city,
-            address: form.address,
-            apartment: form.apartment,
-            postalCode: form.postalCode,
-          },
-          shippingMethod,
-          paymentMethod,
-          items: detailed.map((l) => ({ productId: l.productId, variantId: l.variantId, qty: l.qty })),
-          couponCode: couponResult?.ok ? couponCode : null,
-          customerId: user?.id || null,
-        })
-        trackEvent('purchase', {
-          transaction_id: order.number,
-          currency: 'PKR',
-          value: order.total,
-          shipping: order.shipping,
-          tax: order.tax,
-          items: order.items.map((it) => ({ item_id: it.sku, item_name: it.name, price: it.price, quantity: it.qty })),
-        })
-        clear()
-        toast(`Order ${order.number} placed successfully!`)
-        navigate(`/order-confirmation/${order.number}`)
-      } catch (err) {
-        toast(err.message, 'error')
-        setPlacing(false)
-      }
-    }, 600)
+    try {
+      const order = await createOrder({
+        customer: { firstName: form.firstName, lastName: form.lastName, email: form.email, phone: form.phone },
+        address: {
+          name: `${form.firstName} ${form.lastName}`,
+          phone: form.phone,
+          country: form.country,
+          city: form.city,
+          address: form.address,
+          apartment: form.apartment,
+          postalCode: form.postalCode,
+        },
+        shippingMethod,
+        paymentMethod,
+        items: detailed.map((l) => ({ productId: l.productId, variantId: l.variantId, qty: l.qty })),
+        couponCode: couponResult?.ok ? couponCode : null,
+        customerId: user?.id || null,
+      })
+      trackEvent('purchase', {
+        transaction_id: order.number,
+        currency: 'PKR',
+        value: order.total,
+        shipping: order.shipping,
+        tax: order.tax,
+        items: order.items.map((it) => ({ item_id: it.sku, item_name: it.name, price: it.price, quantity: it.qty })),
+      })
+      clear()
+      toast(`Order ${order.number} placed successfully!`)
+      navigate(`/order-confirmation/${order.number}`)
+    } catch (err) {
+      toast(err.message, 'error')
+      setPlacing(false)
+    }
   }
 
   const sectionTitle = (n, title) => (

@@ -1,0 +1,6028 @@
+{
+ "version": 4,
+ "seededAt": "2026-08-20T13:01:42.730Z",
+ "settings": {
+  "general": {
+   "storeName": "Al Nain",
+   "tagline": "Heritage in Every Thread",
+   "email": "info@alnain.pk",
+   "phone": "+92 300 1234567",
+   "address": "F-7 Markaz, Islamabad, Pakistan",
+   "announcement": "Cash on Delivery nationwide · Free shipping on orders above Rs. 5,000",
+   "logo": "/images/logo.png",
+   "favicon": null
+  },
+  "currency": {
+   "code": "PKR",
+   "symbol": "Rs."
+  },
+  "shipping": {
+   "methods": [
+    {
+     "id": "standard",
+     "label": "Standard Delivery",
+     "eta": "3–5 working days",
+     "fee": 250,
+     "enabled": true
+    },
+    {
+     "id": "express",
+     "label": "Express Delivery",
+     "eta": "1–2 working days",
+     "fee": 500,
+     "enabled": true
+    }
+   ],
+   "freeShippingThreshold": 5000
+  },
+  "tax": {
+   "enabled": true,
+   "rate": 5,
+   "label": "GST"
+  },
+  "payments": [
+   {
+    "id": "cod",
+    "label": "Cash on Delivery",
+    "description": "Pay with cash when your order arrives at your doorstep.",
+    "enabled": true
+   },
+   {
+    "id": "card",
+    "label": "Credit / Debit Card",
+    "description": "Visa and Mastercard. (Gateway integration pending — enable when connected.)",
+    "enabled": false
+   },
+   {
+    "id": "bank",
+    "label": "Bank Transfer",
+    "description": "Direct transfer — order ships once payment is confirmed.",
+    "enabled": false,
+    "details": "Meezan Bank · PK36 MEZN 0002 3401 0524 1601 · Al Nain"
+   },
+   {
+    "id": "wallet",
+    "label": "JazzCash / Easypaisa",
+    "description": "Mobile wallet payment on 0300-1234567.",
+    "enabled": false
+   }
+  ],
+  "seo": {
+   "siteTitle": "Al Nain — Premium Traditional Wear",
+   "metaDescription": "Embroidered dobby and digital printed khaddar suits. Cash on delivery across Pakistan.",
+   "gtmId": "",
+   "googleAnalyticsId": "",
+   "facebookPixelId": ""
+  }
+ },
+ "products": [
+  {
+   "id": "p1",
+   "name": "Gulnar Embroidered Dobby Suit",
+   "slug": "gulnar-embroidered-dobby-suit",
+   "sku": "ALN-001",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "new-arrivals",
+    "eid-edit",
+    "premium-heritage"
+   ],
+   "tags": [
+    "embroidered",
+    "dobby",
+    "festive",
+    "2 piece"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Tilla-embroidered dobby two-piece with zari detailing on the neckline, sleeves and hem borders.",
+   "description": "Gulnar Embroidered Dobby Suit is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Tilla-embroidered dobby two-piece with zari detailing on the neckline, sleeves and hem borders.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 4990,
+   "salePrice": 4290,
+   "costPrice": 2745,
+   "images": [
+    "/images/suit-maroon.jpg",
+    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Maroon",
+       "hex": "#6E1423"
+      },
+      {
+       "value": "Emerald",
+       "hex": "#1F5F4A"
+      },
+      {
+       "value": "Black",
+       "hex": "#1B1B1B"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-001-maroon-s",
+     "sku": "ALN-001-MAS",
+     "options": {
+      "Color": "Maroon",
+      "Size": "S"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 14,
+     "image": "/images/suit-maroon.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-maroon-m",
+     "sku": "ALN-001-MAM",
+     "options": {
+      "Color": "Maroon",
+      "Size": "M"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 8,
+     "image": "/images/suit-maroon.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-maroon-l",
+     "sku": "ALN-001-MAL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "L"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 0,
+     "image": "/images/suit-maroon.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-maroon-xl",
+     "sku": "ALN-001-MAXL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "XL"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 16,
+     "image": "/images/suit-maroon.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-emerald-s",
+     "sku": "ALN-001-EMS",
+     "options": {
+      "Color": "Emerald",
+      "Size": "S"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 4,
+     "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-emerald-m",
+     "sku": "ALN-001-EMM",
+     "options": {
+      "Color": "Emerald",
+      "Size": "M"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 22,
+     "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-emerald-l",
+     "sku": "ALN-001-EML",
+     "options": {
+      "Color": "Emerald",
+      "Size": "L"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 3,
+     "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-emerald-xl",
+     "sku": "ALN-001-EMXL",
+     "options": {
+      "Color": "Emerald",
+      "Size": "XL"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 18,
+     "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-black-s",
+     "sku": "ALN-001-BLS",
+     "options": {
+      "Color": "Black",
+      "Size": "S"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 9,
+     "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-black-m",
+     "sku": "ALN-001-BLM",
+     "options": {
+      "Color": "Black",
+      "Size": "M"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 2,
+     "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-black-l",
+     "sku": "ALN-001-BLL",
+     "options": {
+      "Color": "Black",
+      "Size": "L"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 12,
+     "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-001-black-xl",
+     "sku": "ALN-001-BLXL",
+     "options": {
+      "Color": "Black",
+      "Size": "XL"
+     },
+     "price": 4990,
+     "salePrice": 4290,
+     "stock": 6,
+     "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.8,
+   "reviewCount": 124,
+   "isNew": true,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Gulnar Embroidered Dobby Suit | Al Nain",
+    "metaDescription": "Tilla-embroidered dobby two-piece with zari detailing on the neckline, sleeves and hem borders."
+   },
+   "createdAt": "2026-08-17T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p2",
+   "name": "Mehrbano Pearl Button Dobby Kurta",
+   "slug": "mehrbano-pearl-button-dobby-kurta",
+   "sku": "ALN-002",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "new-arrivals",
+    "best-sellers"
+   ],
+   "tags": [
+    "embroidered",
+    "dobby",
+    "pearl buttons",
+    "kurta"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Self-textured dobby kurta finished with hand-set pearl tassel buttons and embroidered sleeve panels.",
+   "description": "Mehrbano Pearl Button Dobby Kurta is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Self-textured dobby kurta finished with hand-set pearl tassel buttons and embroidered sleeve panels.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta only",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 3490,
+   "salePrice": null,
+   "costPrice": 1920,
+   "images": [
+    "/images/kurta-green.jpg",
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Sage",
+       "hex": "#9CAF88"
+      },
+      {
+       "value": "Beige",
+       "hex": "#D9C7A7"
+      },
+      {
+       "value": "White",
+       "hex": "#F4F1EA"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "XS"
+      },
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-002-sage-xs",
+     "sku": "ALN-002-SAXS",
+     "options": {
+      "Color": "Sage",
+      "Size": "XS"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 22,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-sage-s",
+     "sku": "ALN-002-SAS",
+     "options": {
+      "Color": "Sage",
+      "Size": "S"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 3,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-sage-m",
+     "sku": "ALN-002-SAM",
+     "options": {
+      "Color": "Sage",
+      "Size": "M"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 18,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-sage-l",
+     "sku": "ALN-002-SAL",
+     "options": {
+      "Color": "Sage",
+      "Size": "L"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 9,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-sage-xl",
+     "sku": "ALN-002-SAXL",
+     "options": {
+      "Color": "Sage",
+      "Size": "XL"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 2,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-beige-xs",
+     "sku": "ALN-002-BEXS",
+     "options": {
+      "Color": "Beige",
+      "Size": "XS"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 12,
+     "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-beige-s",
+     "sku": "ALN-002-BES",
+     "options": {
+      "Color": "Beige",
+      "Size": "S"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 6,
+     "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-beige-m",
+     "sku": "ALN-002-BEM",
+     "options": {
+      "Color": "Beige",
+      "Size": "M"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 20,
+     "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-beige-l",
+     "sku": "ALN-002-BEL",
+     "options": {
+      "Color": "Beige",
+      "Size": "L"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 5,
+     "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-beige-xl",
+     "sku": "ALN-002-BEXL",
+     "options": {
+      "Color": "Beige",
+      "Size": "XL"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 11,
+     "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-white-xs",
+     "sku": "ALN-002-WHXS",
+     "options": {
+      "Color": "White",
+      "Size": "XS"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 0,
+     "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-white-s",
+     "sku": "ALN-002-WHS",
+     "options": {
+      "Color": "White",
+      "Size": "S"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 7,
+     "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-white-m",
+     "sku": "ALN-002-WHM",
+     "options": {
+      "Color": "White",
+      "Size": "M"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 15,
+     "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-white-l",
+     "sku": "ALN-002-WHL",
+     "options": {
+      "Color": "White",
+      "Size": "L"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 14,
+     "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-002-white-xl",
+     "sku": "ALN-002-WHXL",
+     "options": {
+      "Color": "White",
+      "Size": "XL"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 8,
+     "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.7,
+   "reviewCount": 96,
+   "isNew": true,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Mehrbano Pearl Button Dobby Kurta | Al Nain",
+    "metaDescription": "Self-textured dobby kurta finished with hand-set pearl tassel buttons and embroidered sleeve panels."
+   },
+   "createdAt": "2026-08-16T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p3",
+   "name": "Inara Embroidered Dobby Co-ord",
+   "slug": "inara-embroidered-dobby-co-ord",
+   "sku": "ALN-003",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "best-sellers",
+    "eid-edit"
+   ],
+   "tags": [
+    "co-ord",
+    "embroidered",
+    "dobby",
+    "2 piece"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Matching kurta-and-trouser co-ord on textured dobby with mirror-accent embroidered borders.",
+   "description": "Inara Embroidered Dobby Co-ord is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Matching kurta-and-trouser co-ord on textured dobby with mirror-accent embroidered borders.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 5490,
+   "salePrice": 4790,
+   "costPrice": 3020,
+   "images": [
+    "/images/duo-green-beige.jpg",
+    "/images/kurta-green.jpg",
+    "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Sage",
+       "hex": "#9CAF88"
+      },
+      {
+       "value": "Beige",
+       "hex": "#D9C7A7"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-003-sage-s",
+     "sku": "ALN-003-SAS",
+     "options": {
+      "Color": "Sage",
+      "Size": "S"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 12,
+     "image": "/images/duo-green-beige.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-sage-m",
+     "sku": "ALN-003-SAM",
+     "options": {
+      "Color": "Sage",
+      "Size": "M"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 6,
+     "image": "/images/duo-green-beige.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-sage-l",
+     "sku": "ALN-003-SAL",
+     "options": {
+      "Color": "Sage",
+      "Size": "L"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 20,
+     "image": "/images/duo-green-beige.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-sage-xl",
+     "sku": "ALN-003-SAXL",
+     "options": {
+      "Color": "Sage",
+      "Size": "XL"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 5,
+     "image": "/images/duo-green-beige.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-beige-s",
+     "sku": "ALN-003-BES",
+     "options": {
+      "Color": "Beige",
+      "Size": "S"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 11,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-beige-m",
+     "sku": "ALN-003-BEM",
+     "options": {
+      "Color": "Beige",
+      "Size": "M"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 0,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-beige-l",
+     "sku": "ALN-003-BEL",
+     "options": {
+      "Color": "Beige",
+      "Size": "L"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 7,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-003-beige-xl",
+     "sku": "ALN-003-BEXL",
+     "options": {
+      "Color": "Beige",
+      "Size": "XL"
+     },
+     "price": 5490,
+     "salePrice": 4790,
+     "stock": 15,
+     "image": "/images/kurta-green.jpg",
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.9,
+   "reviewCount": 88,
+   "isNew": false,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Inara Embroidered Dobby Co-ord | Al Nain",
+    "metaDescription": "Matching kurta-and-trouser co-ord on textured dobby with mirror-accent embroidered borders."
+   },
+   "createdAt": "2026-07-03T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p4",
+   "name": "Anaya Festive Embroidered Dobby",
+   "slug": "anaya-festive-embroidered-dobby",
+   "sku": "ALN-004",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "eid-edit",
+    "festive-formals"
+   ],
+   "tags": [
+    "festive",
+    "embroidered",
+    "dobby"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Festive dobby suit with dense floral embroidery and a gota-finished daaman.",
+   "description": "Anaya Festive Embroidered Dobby is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Festive dobby suit with dense floral embroidery and a gota-finished daaman.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 6990,
+   "salePrice": null,
+   "costPrice": 3845,
+   "images": [
+    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Gold",
+       "hex": "#B99338"
+      },
+      {
+       "value": "Rose",
+       "hex": "#C4536A"
+      },
+      {
+       "value": "Ivory",
+       "hex": "#F1E9D7"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-004-gold-s",
+     "sku": "ALN-004-GOS",
+     "options": {
+      "Color": "Gold",
+      "Size": "S"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-gold-m",
+     "sku": "ALN-004-GOM",
+     "options": {
+      "Color": "Gold",
+      "Size": "M"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-gold-l",
+     "sku": "ALN-004-GOL",
+     "options": {
+      "Color": "Gold",
+      "Size": "L"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-gold-xl",
+     "sku": "ALN-004-GOXL",
+     "options": {
+      "Color": "Gold",
+      "Size": "XL"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-rose-s",
+     "sku": "ALN-004-ROS",
+     "options": {
+      "Color": "Rose",
+      "Size": "S"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-rose-m",
+     "sku": "ALN-004-ROM",
+     "options": {
+      "Color": "Rose",
+      "Size": "M"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-rose-l",
+     "sku": "ALN-004-ROL",
+     "options": {
+      "Color": "Rose",
+      "Size": "L"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-rose-xl",
+     "sku": "ALN-004-ROXL",
+     "options": {
+      "Color": "Rose",
+      "Size": "XL"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-ivory-s",
+     "sku": "ALN-004-IVS",
+     "options": {
+      "Color": "Ivory",
+      "Size": "S"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-ivory-m",
+     "sku": "ALN-004-IVM",
+     "options": {
+      "Color": "Ivory",
+      "Size": "M"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-ivory-l",
+     "sku": "ALN-004-IVL",
+     "options": {
+      "Color": "Ivory",
+      "Size": "L"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-004-ivory-xl",
+     "sku": "ALN-004-IVXL",
+     "options": {
+      "Color": "Ivory",
+      "Size": "XL"
+     },
+     "price": 6990,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.5,
+   "reviewCount": 57,
+   "isNew": false,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Anaya Festive Embroidered Dobby | Al Nain",
+    "metaDescription": "Festive dobby suit with dense floral embroidery and a gota-finished daaman."
+   },
+   "createdAt": "2026-06-29T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p5",
+   "name": "Mahjabeen Zari Dobby Suit",
+   "slug": "mahjabeen-zari-dobby-suit",
+   "sku": "ALN-005",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "festive-formals",
+    "premium-heritage"
+   ],
+   "tags": [
+    "zari",
+    "embroidered",
+    "dobby",
+    "formal"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Statement zari embroidery over deep-tone dobby — made for evening functions.",
+   "description": "Mahjabeen Zari Dobby Suit is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Statement zari embroidery over deep-tone dobby — made for evening functions.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 7490,
+   "salePrice": null,
+   "costPrice": 4120,
+   "images": [
+    "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Emerald",
+       "hex": "#1F5F4A"
+      },
+      {
+       "value": "Maroon",
+       "hex": "#6E1423"
+      },
+      {
+       "value": "Navy",
+       "hex": "#1F2A44"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-005-emerald-s",
+     "sku": "ALN-005-EMS",
+     "options": {
+      "Color": "Emerald",
+      "Size": "S"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-emerald-m",
+     "sku": "ALN-005-EMM",
+     "options": {
+      "Color": "Emerald",
+      "Size": "M"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-emerald-l",
+     "sku": "ALN-005-EML",
+     "options": {
+      "Color": "Emerald",
+      "Size": "L"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-maroon-s",
+     "sku": "ALN-005-MAS",
+     "options": {
+      "Color": "Maroon",
+      "Size": "S"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-maroon-m",
+     "sku": "ALN-005-MAM",
+     "options": {
+      "Color": "Maroon",
+      "Size": "M"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-maroon-l",
+     "sku": "ALN-005-MAL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "L"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-navy-s",
+     "sku": "ALN-005-NAS",
+     "options": {
+      "Color": "Navy",
+      "Size": "S"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-navy-m",
+     "sku": "ALN-005-NAM",
+     "options": {
+      "Color": "Navy",
+      "Size": "M"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-005-navy-l",
+     "sku": "ALN-005-NAL",
+     "options": {
+      "Color": "Navy",
+      "Size": "L"
+     },
+     "price": 7490,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.6,
+   "reviewCount": 41,
+   "isNew": false,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Mahjabeen Zari Dobby Suit | Al Nain",
+    "metaDescription": "Statement zari embroidery over deep-tone dobby — made for evening functions."
+   },
+   "createdAt": "2026-06-25T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p6",
+   "name": "Gulbahar Chikankari Dobby Kurta",
+   "slug": "gulbahar-chikankari-dobby-kurta",
+   "sku": "ALN-006",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "premium-heritage",
+    "best-sellers"
+   ],
+   "tags": [
+    "chikankari",
+    "handwork",
+    "dobby"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Heirloom chikankari hand embroidery on breathable fine dobby — quiet luxury.",
+   "description": "Gulbahar Chikankari Dobby Kurta is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Heirloom chikankari hand embroidery on breathable fine dobby — quiet luxury.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 4290,
+   "salePrice": null,
+   "costPrice": 2360,
+   "images": [
+    "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "White",
+       "hex": "#F4F1EA"
+      },
+      {
+       "value": "Blush",
+       "hex": "#E8B4B8"
+      },
+      {
+       "value": "Ivory",
+       "hex": "#F1E9D7"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-006-white-s",
+     "sku": "ALN-006-WHS",
+     "options": {
+      "Color": "White",
+      "Size": "S"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-white-m",
+     "sku": "ALN-006-WHM",
+     "options": {
+      "Color": "White",
+      "Size": "M"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-white-l",
+     "sku": "ALN-006-WHL",
+     "options": {
+      "Color": "White",
+      "Size": "L"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-white-xl",
+     "sku": "ALN-006-WHXL",
+     "options": {
+      "Color": "White",
+      "Size": "XL"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-blush-s",
+     "sku": "ALN-006-BLS",
+     "options": {
+      "Color": "Blush",
+      "Size": "S"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-blush-m",
+     "sku": "ALN-006-BLM",
+     "options": {
+      "Color": "Blush",
+      "Size": "M"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-blush-l",
+     "sku": "ALN-006-BLL",
+     "options": {
+      "Color": "Blush",
+      "Size": "L"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-blush-xl",
+     "sku": "ALN-006-BLXL",
+     "options": {
+      "Color": "Blush",
+      "Size": "XL"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-ivory-s",
+     "sku": "ALN-006-IVS",
+     "options": {
+      "Color": "Ivory",
+      "Size": "S"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-ivory-m",
+     "sku": "ALN-006-IVM",
+     "options": {
+      "Color": "Ivory",
+      "Size": "M"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-ivory-l",
+     "sku": "ALN-006-IVL",
+     "options": {
+      "Color": "Ivory",
+      "Size": "L"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-006-ivory-xl",
+     "sku": "ALN-006-IVXL",
+     "options": {
+      "Color": "Ivory",
+      "Size": "XL"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.8,
+   "reviewCount": 112,
+   "isNew": false,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Gulbahar Chikankari Dobby Kurta | Al Nain",
+    "metaDescription": "Heirloom chikankari hand embroidery on breathable fine dobby — quiet luxury."
+   },
+   "createdAt": "2026-06-21T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p7",
+   "name": "Roshanay Luxe Dobby Formal",
+   "slug": "roshanay-luxe-dobby-formal",
+   "sku": "ALN-007",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "new-arrivals",
+    "festive-formals"
+   ],
+   "tags": [
+    "formal",
+    "embroidered",
+    "dobby",
+    "wedding"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Our most embellished dobby formal — kora, dabka and sequin spray, set by hand.",
+   "description": "Roshanay Luxe Dobby Formal is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Our most embellished dobby formal — kora, dabka and sequin spray, set by hand.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 8490,
+   "salePrice": null,
+   "costPrice": 4670,
+   "images": [
+    "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Ivory",
+       "hex": "#F1E9D7"
+      },
+      {
+       "value": "Blush",
+       "hex": "#E8B4B8"
+      },
+      {
+       "value": "Gold",
+       "hex": "#B99338"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-007-ivory-s",
+     "sku": "ALN-007-IVS",
+     "options": {
+      "Color": "Ivory",
+      "Size": "S"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-ivory-m",
+     "sku": "ALN-007-IVM",
+     "options": {
+      "Color": "Ivory",
+      "Size": "M"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-ivory-l",
+     "sku": "ALN-007-IVL",
+     "options": {
+      "Color": "Ivory",
+      "Size": "L"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-blush-s",
+     "sku": "ALN-007-BLS",
+     "options": {
+      "Color": "Blush",
+      "Size": "S"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-blush-m",
+     "sku": "ALN-007-BLM",
+     "options": {
+      "Color": "Blush",
+      "Size": "M"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-blush-l",
+     "sku": "ALN-007-BLL",
+     "options": {
+      "Color": "Blush",
+      "Size": "L"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-gold-s",
+     "sku": "ALN-007-GOS",
+     "options": {
+      "Color": "Gold",
+      "Size": "S"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-gold-m",
+     "sku": "ALN-007-GOM",
+     "options": {
+      "Color": "Gold",
+      "Size": "M"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-007-gold-l",
+     "sku": "ALN-007-GOL",
+     "options": {
+      "Color": "Gold",
+      "Size": "L"
+     },
+     "price": 8490,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.9,
+   "reviewCount": 34,
+   "isNew": true,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Roshanay Luxe Dobby Formal | Al Nain",
+    "metaDescription": "Our most embellished dobby formal — kora, dabka and sequin spray, set by hand."
+   },
+   "createdAt": "2026-08-11T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p8",
+   "name": "Meher Mirror-work Dobby Suit",
+   "slug": "meher-mirror-work-dobby-suit",
+   "sku": "ALN-008",
+   "brand": "Al Nain",
+   "category": "embroidered-dobby",
+   "collections": [
+    "eid-edit"
+   ],
+   "tags": [
+    "mirror work",
+    "embroidered",
+    "dobby"
+   ],
+   "gender": "women",
+   "fabric": "Dobby",
+   "shortDescription": "Hand-set mirror work that catches the light — on soft self-weave dobby.",
+   "description": "Meher Mirror-work Dobby Suit is part of our Embroidered Dobby line — cut, finished and quality-checked in our Islamabad atelier. Hand-set mirror work that catches the light — on soft self-weave dobby.\n\nThe dobby fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Dobby",
+    "Line: Embroidered Dobby",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 5990,
+   "salePrice": 5190,
+   "costPrice": 3295,
+   "images": [
+    "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Teal",
+       "hex": "#175E63"
+      },
+      {
+       "value": "Gold",
+       "hex": "#B99338"
+      },
+      {
+       "value": "Rose",
+       "hex": "#C4536A"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-008-teal-s",
+     "sku": "ALN-008-TES",
+     "options": {
+      "Color": "Teal",
+      "Size": "S"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-teal-m",
+     "sku": "ALN-008-TEM",
+     "options": {
+      "Color": "Teal",
+      "Size": "M"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-teal-l",
+     "sku": "ALN-008-TEL",
+     "options": {
+      "Color": "Teal",
+      "Size": "L"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-teal-xl",
+     "sku": "ALN-008-TEXL",
+     "options": {
+      "Color": "Teal",
+      "Size": "XL"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-gold-s",
+     "sku": "ALN-008-GOS",
+     "options": {
+      "Color": "Gold",
+      "Size": "S"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-gold-m",
+     "sku": "ALN-008-GOM",
+     "options": {
+      "Color": "Gold",
+      "Size": "M"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-gold-l",
+     "sku": "ALN-008-GOL",
+     "options": {
+      "Color": "Gold",
+      "Size": "L"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-gold-xl",
+     "sku": "ALN-008-GOXL",
+     "options": {
+      "Color": "Gold",
+      "Size": "XL"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-rose-s",
+     "sku": "ALN-008-ROS",
+     "options": {
+      "Color": "Rose",
+      "Size": "S"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-rose-m",
+     "sku": "ALN-008-ROM",
+     "options": {
+      "Color": "Rose",
+      "Size": "M"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-rose-l",
+     "sku": "ALN-008-ROL",
+     "options": {
+      "Color": "Rose",
+      "Size": "L"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-008-rose-xl",
+     "sku": "ALN-008-ROXL",
+     "options": {
+      "Color": "Rose",
+      "Size": "XL"
+     },
+     "price": 5990,
+     "salePrice": 5190,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.4,
+   "reviewCount": 65,
+   "isNew": false,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Meher Mirror-work Dobby Suit | Al Nain",
+    "metaDescription": "Hand-set mirror work that catches the light — on soft self-weave dobby."
+   },
+   "createdAt": "2026-06-13T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p9",
+   "name": "Zarlish Digital Printed Khaddar Suit",
+   "slug": "zarlish-digital-printed-khaddar-suit",
+   "sku": "ALN-009",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "best-sellers",
+    "winter-edit"
+   ],
+   "tags": [
+    "digital print",
+    "khaddar",
+    "2 piece"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Signature digital print on soft-washed khaddar with printed border daaman and sleeves.",
+   "description": "Zarlish Digital Printed Khaddar Suit is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Signature digital print on soft-washed khaddar with printed border daaman and sleeves.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 3290,
+   "salePrice": 2790,
+   "costPrice": 1810,
+   "images": [
+    "/images/kurta-rust.jpg",
+    "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Rust",
+       "hex": "#B4552D"
+      },
+      {
+       "value": "Olive",
+       "hex": "#6F6B3A"
+      },
+      {
+       "value": "Black",
+       "hex": "#1B1B1B"
+      },
+      {
+       "value": "Beige",
+       "hex": "#D9C7A7"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      },
+      {
+       "value": "XXL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-009-rust-s",
+     "sku": "ALN-009-RUS",
+     "options": {
+      "Color": "Rust",
+      "Size": "S"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 4,
+     "image": "/images/kurta-rust.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-rust-m",
+     "sku": "ALN-009-RUM",
+     "options": {
+      "Color": "Rust",
+      "Size": "M"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 22,
+     "image": "/images/kurta-rust.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-rust-l",
+     "sku": "ALN-009-RUL",
+     "options": {
+      "Color": "Rust",
+      "Size": "L"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 3,
+     "image": "/images/kurta-rust.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-rust-xl",
+     "sku": "ALN-009-RUXL",
+     "options": {
+      "Color": "Rust",
+      "Size": "XL"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 18,
+     "image": "/images/kurta-rust.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-rust-xxl",
+     "sku": "ALN-009-RUXX",
+     "options": {
+      "Color": "Rust",
+      "Size": "XXL"
+     },
+     "price": 3490,
+     "salePrice": 2990,
+     "stock": 9,
+     "image": "/images/kurta-rust.jpg",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-olive-s",
+     "sku": "ALN-009-OLS",
+     "options": {
+      "Color": "Olive",
+      "Size": "S"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 2,
+     "image": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-olive-m",
+     "sku": "ALN-009-OLM",
+     "options": {
+      "Color": "Olive",
+      "Size": "M"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 12,
+     "image": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-olive-l",
+     "sku": "ALN-009-OLL",
+     "options": {
+      "Color": "Olive",
+      "Size": "L"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 6,
+     "image": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-olive-xl",
+     "sku": "ALN-009-OLXL",
+     "options": {
+      "Color": "Olive",
+      "Size": "XL"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 20,
+     "image": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-olive-xxl",
+     "sku": "ALN-009-OLXX",
+     "options": {
+      "Color": "Olive",
+      "Size": "XXL"
+     },
+     "price": 3490,
+     "salePrice": 2990,
+     "stock": 5,
+     "image": "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-black-s",
+     "sku": "ALN-009-BLS",
+     "options": {
+      "Color": "Black",
+      "Size": "S"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 11,
+     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-black-m",
+     "sku": "ALN-009-BLM",
+     "options": {
+      "Color": "Black",
+      "Size": "M"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 0,
+     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-black-l",
+     "sku": "ALN-009-BLL",
+     "options": {
+      "Color": "Black",
+      "Size": "L"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 7,
+     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-black-xl",
+     "sku": "ALN-009-BLXL",
+     "options": {
+      "Color": "Black",
+      "Size": "XL"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 15,
+     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-black-xxl",
+     "sku": "ALN-009-BLXX",
+     "options": {
+      "Color": "Black",
+      "Size": "XXL"
+     },
+     "price": 3490,
+     "salePrice": 2990,
+     "stock": 14,
+     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-beige-s",
+     "sku": "ALN-009-BES",
+     "options": {
+      "Color": "Beige",
+      "Size": "S"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 8,
+     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-beige-m",
+     "sku": "ALN-009-BEM",
+     "options": {
+      "Color": "Beige",
+      "Size": "M"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 0,
+     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-beige-l",
+     "sku": "ALN-009-BEL",
+     "options": {
+      "Color": "Beige",
+      "Size": "L"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 16,
+     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-beige-xl",
+     "sku": "ALN-009-BEXL",
+     "options": {
+      "Color": "Beige",
+      "Size": "XL"
+     },
+     "price": 3290,
+     "salePrice": 2790,
+     "stock": 4,
+     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    },
+    {
+     "id": "aln-009-beige-xxl",
+     "sku": "ALN-009-BEXX",
+     "options": {
+      "Color": "Beige",
+      "Size": "XXL"
+     },
+     "price": 3490,
+     "salePrice": 2990,
+     "stock": 22,
+     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.7,
+   "reviewCount": 203,
+   "isNew": false,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Zarlish Digital Printed Khaddar Suit | Al Nain",
+    "metaDescription": "Signature digital print on soft-washed khaddar with printed border daaman and sleeves."
+   },
+   "createdAt": "2026-06-09T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p10",
+   "name": "Farah Signature Print Khaddar",
+   "slug": "farah-signature-print-khaddar",
+   "sku": "ALN-010",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "signature-prints",
+    "best-sellers"
+   ],
+   "tags": [
+    "digital print",
+    "khaddar",
+    "signature print"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "The season’s signature print, digitally rendered edge-to-edge on premium khaddar.",
+   "description": "Farah Signature Print Khaddar is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. The season’s signature print, digitally rendered edge-to-edge on premium khaddar.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 2990,
+   "salePrice": null,
+   "costPrice": 1645,
+   "images": [
+    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Mustard",
+       "hex": "#C9962E"
+      },
+      {
+       "value": "Teal",
+       "hex": "#175E63"
+      },
+      {
+       "value": "Rose",
+       "hex": "#C4536A"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "XS"
+      },
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-010-mustard-xs",
+     "sku": "ALN-010-MUXS",
+     "options": {
+      "Color": "Mustard",
+      "Size": "XS"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-mustard-s",
+     "sku": "ALN-010-MUS",
+     "options": {
+      "Color": "Mustard",
+      "Size": "S"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-mustard-m",
+     "sku": "ALN-010-MUM",
+     "options": {
+      "Color": "Mustard",
+      "Size": "M"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-mustard-l",
+     "sku": "ALN-010-MUL",
+     "options": {
+      "Color": "Mustard",
+      "Size": "L"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-mustard-xl",
+     "sku": "ALN-010-MUXL",
+     "options": {
+      "Color": "Mustard",
+      "Size": "XL"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-teal-xs",
+     "sku": "ALN-010-TEXS",
+     "options": {
+      "Color": "Teal",
+      "Size": "XS"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-teal-s",
+     "sku": "ALN-010-TES",
+     "options": {
+      "Color": "Teal",
+      "Size": "S"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-teal-m",
+     "sku": "ALN-010-TEM",
+     "options": {
+      "Color": "Teal",
+      "Size": "M"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-teal-l",
+     "sku": "ALN-010-TEL",
+     "options": {
+      "Color": "Teal",
+      "Size": "L"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-teal-xl",
+     "sku": "ALN-010-TEXL",
+     "options": {
+      "Color": "Teal",
+      "Size": "XL"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-rose-xs",
+     "sku": "ALN-010-ROXS",
+     "options": {
+      "Color": "Rose",
+      "Size": "XS"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-rose-s",
+     "sku": "ALN-010-ROS",
+     "options": {
+      "Color": "Rose",
+      "Size": "S"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-rose-m",
+     "sku": "ALN-010-ROM",
+     "options": {
+      "Color": "Rose",
+      "Size": "M"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-rose-l",
+     "sku": "ALN-010-ROL",
+     "options": {
+      "Color": "Rose",
+      "Size": "L"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-010-rose-xl",
+     "sku": "ALN-010-ROXL",
+     "options": {
+      "Color": "Rose",
+      "Size": "XL"
+     },
+     "price": 2990,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.6,
+   "reviewCount": 148,
+   "isNew": false,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Farah Signature Print Khaddar | Al Nain",
+    "metaDescription": "The season’s signature print, digitally rendered edge-to-edge on premium khaddar."
+   },
+   "createdAt": "2026-06-05T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p11",
+   "name": "Dilnaz Printed Khaddar 2-Piece",
+   "slug": "dilnaz-printed-khaddar-2-piece",
+   "sku": "ALN-011",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "signature-prints"
+   ],
+   "tags": [
+    "digital print",
+    "khaddar",
+    "casual"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Easy two-piece in soft pastels — a printed khaddar staple for every day.",
+   "description": "Dilnaz Printed Khaddar 2-Piece is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Easy two-piece in soft pastels — a printed khaddar staple for every day.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 2490,
+   "salePrice": null,
+   "costPrice": 1370,
+   "images": [
+    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "White",
+       "hex": "#F4F1EA"
+      },
+      {
+       "value": "Blush",
+       "hex": "#E8B4B8"
+      },
+      {
+       "value": "Teal",
+       "hex": "#175E63"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "XS"
+      },
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      },
+      {
+       "value": "XXL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-011-white-xs",
+     "sku": "ALN-011-WHXS",
+     "options": {
+      "Color": "White",
+      "Size": "XS"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-white-s",
+     "sku": "ALN-011-WHS",
+     "options": {
+      "Color": "White",
+      "Size": "S"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-white-m",
+     "sku": "ALN-011-WHM",
+     "options": {
+      "Color": "White",
+      "Size": "M"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-white-l",
+     "sku": "ALN-011-WHL",
+     "options": {
+      "Color": "White",
+      "Size": "L"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-white-xl",
+     "sku": "ALN-011-WHXL",
+     "options": {
+      "Color": "White",
+      "Size": "XL"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-white-xxl",
+     "sku": "ALN-011-WHXX",
+     "options": {
+      "Color": "White",
+      "Size": "XXL"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-blush-xs",
+     "sku": "ALN-011-BLXS",
+     "options": {
+      "Color": "Blush",
+      "Size": "XS"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-blush-s",
+     "sku": "ALN-011-BLS",
+     "options": {
+      "Color": "Blush",
+      "Size": "S"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-blush-m",
+     "sku": "ALN-011-BLM",
+     "options": {
+      "Color": "Blush",
+      "Size": "M"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-blush-l",
+     "sku": "ALN-011-BLL",
+     "options": {
+      "Color": "Blush",
+      "Size": "L"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-blush-xl",
+     "sku": "ALN-011-BLXL",
+     "options": {
+      "Color": "Blush",
+      "Size": "XL"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-blush-xxl",
+     "sku": "ALN-011-BLXX",
+     "options": {
+      "Color": "Blush",
+      "Size": "XXL"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-teal-xs",
+     "sku": "ALN-011-TEXS",
+     "options": {
+      "Color": "Teal",
+      "Size": "XS"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-teal-s",
+     "sku": "ALN-011-TES",
+     "options": {
+      "Color": "Teal",
+      "Size": "S"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-teal-m",
+     "sku": "ALN-011-TEM",
+     "options": {
+      "Color": "Teal",
+      "Size": "M"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-teal-l",
+     "sku": "ALN-011-TEL",
+     "options": {
+      "Color": "Teal",
+      "Size": "L"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-teal-xl",
+     "sku": "ALN-011-TEXL",
+     "options": {
+      "Color": "Teal",
+      "Size": "XL"
+     },
+     "price": 2490,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-011-teal-xxl",
+     "sku": "ALN-011-TEXX",
+     "options": {
+      "Color": "Teal",
+      "Size": "XXL"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.3,
+   "reviewCount": 91,
+   "isNew": false,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Dilnaz Printed Khaddar 2-Piece | Al Nain",
+    "metaDescription": "Easy two-piece in soft pastels — a printed khaddar staple for every day."
+   },
+   "createdAt": "2026-06-01T13:01:42.728Z",
+   "updatedAt": "2026-08-19T13:01:42.728Z"
+  },
+  {
+   "id": "p12",
+   "name": "Sehr Everyday Printed Khaddar",
+   "slug": "sehr-everyday-printed-khaddar",
+   "sku": "ALN-012",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [],
+   "tags": [
+    "digital print",
+    "khaddar",
+    "everyday"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Understated geometric print on brushed khaddar — the working-day favourite.",
+   "description": "Sehr Everyday Printed Khaddar is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Understated geometric print on brushed khaddar — the working-day favourite.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 2790,
+   "salePrice": null,
+   "costPrice": 1535,
+   "images": [
+    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Beige",
+       "hex": "#D9C7A7"
+      },
+      {
+       "value": "White",
+       "hex": "#F4F1EA"
+      },
+      {
+       "value": "Grey",
+       "hex": "#8B8B85"
+      },
+      {
+       "value": "Navy",
+       "hex": "#1F2A44"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-012-beige-s",
+     "sku": "ALN-012-BES",
+     "options": {
+      "Color": "Beige",
+      "Size": "S"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-beige-m",
+     "sku": "ALN-012-BEM",
+     "options": {
+      "Color": "Beige",
+      "Size": "M"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-beige-l",
+     "sku": "ALN-012-BEL",
+     "options": {
+      "Color": "Beige",
+      "Size": "L"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-beige-xl",
+     "sku": "ALN-012-BEXL",
+     "options": {
+      "Color": "Beige",
+      "Size": "XL"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-white-s",
+     "sku": "ALN-012-WHS",
+     "options": {
+      "Color": "White",
+      "Size": "S"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-white-m",
+     "sku": "ALN-012-WHM",
+     "options": {
+      "Color": "White",
+      "Size": "M"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-white-l",
+     "sku": "ALN-012-WHL",
+     "options": {
+      "Color": "White",
+      "Size": "L"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-white-xl",
+     "sku": "ALN-012-WHXL",
+     "options": {
+      "Color": "White",
+      "Size": "XL"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-grey-s",
+     "sku": "ALN-012-GRS",
+     "options": {
+      "Color": "Grey",
+      "Size": "S"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-grey-m",
+     "sku": "ALN-012-GRM",
+     "options": {
+      "Color": "Grey",
+      "Size": "M"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-grey-l",
+     "sku": "ALN-012-GRL",
+     "options": {
+      "Color": "Grey",
+      "Size": "L"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-grey-xl",
+     "sku": "ALN-012-GRXL",
+     "options": {
+      "Color": "Grey",
+      "Size": "XL"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-navy-s",
+     "sku": "ALN-012-NAS",
+     "options": {
+      "Color": "Navy",
+      "Size": "S"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-navy-m",
+     "sku": "ALN-012-NAM",
+     "options": {
+      "Color": "Navy",
+      "Size": "M"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-navy-l",
+     "sku": "ALN-012-NAL",
+     "options": {
+      "Color": "Navy",
+      "Size": "L"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-012-navy-xl",
+     "sku": "ALN-012-NAXL",
+     "options": {
+      "Color": "Navy",
+      "Size": "XL"
+     },
+     "price": 2790,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.2,
+   "reviewCount": 77,
+   "isNew": false,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Sehr Everyday Printed Khaddar | Al Nain",
+    "metaDescription": "Understated geometric print on brushed khaddar — the working-day favourite."
+   },
+   "createdAt": "2026-05-28T13:01:42.729Z",
+   "updatedAt": "2026-08-19T13:01:42.729Z"
+  },
+  {
+   "id": "p13",
+   "name": "Shabnam Floral Khaddar Suit",
+   "slug": "shabnam-floral-khaddar-suit",
+   "sku": "ALN-013",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "new-arrivals",
+    "signature-prints"
+   ],
+   "tags": [
+    "floral",
+    "digital print",
+    "khaddar"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Dark-ground florals in gold and maroon — a digital print with a formal mood.",
+   "description": "Shabnam Floral Khaddar Suit is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Dark-ground florals in gold and maroon — a digital print with a formal mood.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 3490,
+   "salePrice": null,
+   "costPrice": 1920,
+   "images": [
+    "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Black",
+       "hex": "#1B1B1B"
+      },
+      {
+       "value": "Gold",
+       "hex": "#B99338"
+      },
+      {
+       "value": "Maroon",
+       "hex": "#6E1423"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-013-black-s",
+     "sku": "ALN-013-BLS",
+     "options": {
+      "Color": "Black",
+      "Size": "S"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-black-m",
+     "sku": "ALN-013-BLM",
+     "options": {
+      "Color": "Black",
+      "Size": "M"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-black-l",
+     "sku": "ALN-013-BLL",
+     "options": {
+      "Color": "Black",
+      "Size": "L"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-black-xl",
+     "sku": "ALN-013-BLXL",
+     "options": {
+      "Color": "Black",
+      "Size": "XL"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-gold-s",
+     "sku": "ALN-013-GOS",
+     "options": {
+      "Color": "Gold",
+      "Size": "S"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-gold-m",
+     "sku": "ALN-013-GOM",
+     "options": {
+      "Color": "Gold",
+      "Size": "M"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-gold-l",
+     "sku": "ALN-013-GOL",
+     "options": {
+      "Color": "Gold",
+      "Size": "L"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-gold-xl",
+     "sku": "ALN-013-GOXL",
+     "options": {
+      "Color": "Gold",
+      "Size": "XL"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-maroon-s",
+     "sku": "ALN-013-MAS",
+     "options": {
+      "Color": "Maroon",
+      "Size": "S"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-maroon-m",
+     "sku": "ALN-013-MAM",
+     "options": {
+      "Color": "Maroon",
+      "Size": "M"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-maroon-l",
+     "sku": "ALN-013-MAL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "L"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-013-maroon-xl",
+     "sku": "ALN-013-MAXL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "XL"
+     },
+     "price": 3490,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.5,
+   "reviewCount": 28,
+   "isNew": true,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Shabnam Floral Khaddar Suit | Al Nain",
+    "metaDescription": "Dark-ground florals in gold and maroon — a digital print with a formal mood."
+   },
+   "createdAt": "2026-08-05T13:01:42.729Z",
+   "updatedAt": "2026-08-19T13:01:42.729Z"
+  },
+  {
+   "id": "p14",
+   "name": "Nooriya Winter Khaddar Suit",
+   "slug": "nooriya-winter-khaddar-suit",
+   "sku": "ALN-014",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "winter-edit",
+    "festive-formals"
+   ],
+   "tags": [
+    "winter",
+    "digital print",
+    "khaddar"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Heavier winter-weight khaddar in jewel tones with a printed shawl-style dupatta.",
+   "description": "Nooriya Winter Khaddar Suit is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Heavier winter-weight khaddar in jewel tones with a printed shawl-style dupatta.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 3990,
+   "salePrice": 3390,
+   "costPrice": 2195,
+   "images": [
+    "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Maroon",
+       "hex": "#6E1423"
+      },
+      {
+       "value": "Navy",
+       "hex": "#1F2A44"
+      },
+      {
+       "value": "Emerald",
+       "hex": "#1F5F4A"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      },
+      {
+       "value": "XXL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-014-maroon-s",
+     "sku": "ALN-014-MAS",
+     "options": {
+      "Color": "Maroon",
+      "Size": "S"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-maroon-m",
+     "sku": "ALN-014-MAM",
+     "options": {
+      "Color": "Maroon",
+      "Size": "M"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-maroon-l",
+     "sku": "ALN-014-MAL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "L"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-maroon-xl",
+     "sku": "ALN-014-MAXL",
+     "options": {
+      "Color": "Maroon",
+      "Size": "XL"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-maroon-xxl",
+     "sku": "ALN-014-MAXX",
+     "options": {
+      "Color": "Maroon",
+      "Size": "XXL"
+     },
+     "price": 4190,
+     "salePrice": 3590,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-navy-s",
+     "sku": "ALN-014-NAS",
+     "options": {
+      "Color": "Navy",
+      "Size": "S"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-navy-m",
+     "sku": "ALN-014-NAM",
+     "options": {
+      "Color": "Navy",
+      "Size": "M"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-navy-l",
+     "sku": "ALN-014-NAL",
+     "options": {
+      "Color": "Navy",
+      "Size": "L"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-navy-xl",
+     "sku": "ALN-014-NAXL",
+     "options": {
+      "Color": "Navy",
+      "Size": "XL"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-navy-xxl",
+     "sku": "ALN-014-NAXX",
+     "options": {
+      "Color": "Navy",
+      "Size": "XXL"
+     },
+     "price": 4190,
+     "salePrice": 3590,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-emerald-s",
+     "sku": "ALN-014-EMS",
+     "options": {
+      "Color": "Emerald",
+      "Size": "S"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-emerald-m",
+     "sku": "ALN-014-EMM",
+     "options": {
+      "Color": "Emerald",
+      "Size": "M"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-emerald-l",
+     "sku": "ALN-014-EML",
+     "options": {
+      "Color": "Emerald",
+      "Size": "L"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-emerald-xl",
+     "sku": "ALN-014-EMXL",
+     "options": {
+      "Color": "Emerald",
+      "Size": "XL"
+     },
+     "price": 3990,
+     "salePrice": 3390,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-014-emerald-xxl",
+     "sku": "ALN-014-EMXX",
+     "options": {
+      "Color": "Emerald",
+      "Size": "XXL"
+     },
+     "price": 4190,
+     "salePrice": 3590,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.7,
+   "reviewCount": 134,
+   "isNew": false,
+   "featured": true,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Nooriya Winter Khaddar Suit | Al Nain",
+    "metaDescription": "Heavier winter-weight khaddar in jewel tones with a printed shawl-style dupatta."
+   },
+   "createdAt": "2026-05-20T13:01:42.729Z",
+   "updatedAt": "2026-08-19T13:01:42.729Z"
+  },
+  {
+   "id": "p15",
+   "name": "Zaray Digital Print Khaddar Kurta",
+   "slug": "zaray-digital-print-khaddar-kurta",
+   "sku": "ALN-015",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "winter-edit"
+   ],
+   "tags": [
+    "kurta",
+    "digital print",
+    "khaddar"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Single kurta in earthy digital prints — pair it with anything.",
+   "description": "Zaray Digital Print Khaddar Kurta is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Single kurta in earthy digital prints — pair it with anything.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta only",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 2690,
+   "salePrice": null,
+   "costPrice": 1480,
+   "images": [
+    "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Olive",
+       "hex": "#6F6B3A"
+      },
+      {
+       "value": "Rust",
+       "hex": "#B4552D"
+      },
+      {
+       "value": "Brown",
+       "hex": "#5C4327"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-015-olive-s",
+     "sku": "ALN-015-OLS",
+     "options": {
+      "Color": "Olive",
+      "Size": "S"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 7,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-olive-m",
+     "sku": "ALN-015-OLM",
+     "options": {
+      "Color": "Olive",
+      "Size": "M"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 15,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-olive-l",
+     "sku": "ALN-015-OLL",
+     "options": {
+      "Color": "Olive",
+      "Size": "L"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 14,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-olive-xl",
+     "sku": "ALN-015-OLXL",
+     "options": {
+      "Color": "Olive",
+      "Size": "XL"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 8,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-rust-s",
+     "sku": "ALN-015-RUS",
+     "options": {
+      "Color": "Rust",
+      "Size": "S"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 0,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-rust-m",
+     "sku": "ALN-015-RUM",
+     "options": {
+      "Color": "Rust",
+      "Size": "M"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-rust-l",
+     "sku": "ALN-015-RUL",
+     "options": {
+      "Color": "Rust",
+      "Size": "L"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-rust-xl",
+     "sku": "ALN-015-RUXL",
+     "options": {
+      "Color": "Rust",
+      "Size": "XL"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-brown-s",
+     "sku": "ALN-015-BRS",
+     "options": {
+      "Color": "Brown",
+      "Size": "S"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-brown-m",
+     "sku": "ALN-015-BRM",
+     "options": {
+      "Color": "Brown",
+      "Size": "M"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-brown-l",
+     "sku": "ALN-015-BRL",
+     "options": {
+      "Color": "Brown",
+      "Size": "L"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-015-brown-xl",
+     "sku": "ALN-015-BRXL",
+     "options": {
+      "Color": "Brown",
+      "Size": "XL"
+     },
+     "price": 2690,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.4,
+   "reviewCount": 53,
+   "isNew": false,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Zaray Digital Print Khaddar Kurta | Al Nain",
+    "metaDescription": "Single kurta in earthy digital prints — pair it with anything."
+   },
+   "createdAt": "2026-05-16T13:01:42.729Z",
+   "updatedAt": "2026-08-19T13:01:42.729Z"
+  },
+  {
+   "id": "p16",
+   "name": "Dua Printed Khaddar Co-ord",
+   "slug": "dua-printed-khaddar-co-ord",
+   "sku": "ALN-016",
+   "brand": "Al Nain",
+   "category": "digital-printed-khaddar",
+   "collections": [
+    "new-arrivals",
+    "signature-prints"
+   ],
+   "tags": [
+    "co-ord",
+    "digital print",
+    "khaddar"
+   ],
+   "gender": "women",
+   "fabric": "Khaddar",
+   "shortDescription": "Printed co-ord set on featherweight khaddar — matched kurta and trouser.",
+   "description": "Dua Printed Khaddar Co-ord is part of our Digital Printed Khaddar line — cut, finished and quality-checked in our Islamabad atelier. Printed co-ord set on featherweight khaddar — matched kurta and trouser.\n\nThe khaddar fabric is sourced from certified Pakistani mills and pre-washed for softness and colour fastness. Every piece is inspected twice before it ships, and embroidery (where present) is secured with a backing layer so it stays pristine through wear and washing.\n\nStyling note: pair it with khussa or a modern flat, and layer with our shawls in colder months. The silhouette is true to size — if you prefer a relaxed fit, we recommend going one size up.",
+   "details": [
+    "Fabric: Khaddar",
+    "Line: Digital Printed Khaddar",
+    "Includes: Kurta and trouser (dupatta where pictured)",
+    "Fit: True to size, tailored silhouette",
+    "Care: Gentle machine wash inside-out; dry clean embellished pieces",
+    "Made in Pakistan — Al Nain atelier, Islamabad"
+   ],
+   "price": 4290,
+   "salePrice": null,
+   "costPrice": 2360,
+   "images": [
+    "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop"
+   ],
+   "attributes": [
+    {
+     "name": "Color",
+     "values": [
+      {
+       "value": "Blush",
+       "hex": "#E8B4B8"
+      },
+      {
+       "value": "Sage",
+       "hex": "#9CAF88"
+      },
+      {
+       "value": "Mustard",
+       "hex": "#C9962E"
+      }
+     ]
+    },
+    {
+     "name": "Size",
+     "values": [
+      {
+       "value": "S"
+      },
+      {
+       "value": "M"
+      },
+      {
+       "value": "L"
+      },
+      {
+       "value": "XL"
+      }
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "aln-016-blush-s",
+     "sku": "ALN-016-BLS",
+     "options": {
+      "Color": "Blush",
+      "Size": "S"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 16,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-blush-m",
+     "sku": "ALN-016-BLM",
+     "options": {
+      "Color": "Blush",
+      "Size": "M"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 4,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-blush-l",
+     "sku": "ALN-016-BLL",
+     "options": {
+      "Color": "Blush",
+      "Size": "L"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 22,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-blush-xl",
+     "sku": "ALN-016-BLXL",
+     "options": {
+      "Color": "Blush",
+      "Size": "XL"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 3,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-sage-s",
+     "sku": "ALN-016-SAS",
+     "options": {
+      "Color": "Sage",
+      "Size": "S"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 18,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-sage-m",
+     "sku": "ALN-016-SAM",
+     "options": {
+      "Color": "Sage",
+      "Size": "M"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 9,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-sage-l",
+     "sku": "ALN-016-SAL",
+     "options": {
+      "Color": "Sage",
+      "Size": "L"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 2,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-sage-xl",
+     "sku": "ALN-016-SAXL",
+     "options": {
+      "Color": "Sage",
+      "Size": "XL"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 12,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-mustard-s",
+     "sku": "ALN-016-MUS",
+     "options": {
+      "Color": "Mustard",
+      "Size": "S"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 6,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-mustard-m",
+     "sku": "ALN-016-MUM",
+     "options": {
+      "Color": "Mustard",
+      "Size": "M"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 20,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-mustard-l",
+     "sku": "ALN-016-MUL",
+     "options": {
+      "Color": "Mustard",
+      "Size": "L"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 5,
+     "image": null,
+     "status": "active"
+    },
+    {
+     "id": "aln-016-mustard-xl",
+     "sku": "ALN-016-MUXL",
+     "options": {
+      "Color": "Mustard",
+      "Size": "XL"
+     },
+     "price": 4290,
+     "salePrice": null,
+     "stock": 11,
+     "image": null,
+     "status": "active"
+    }
+   ],
+   "lowStockThreshold": 5,
+   "allowBackorders": false,
+   "rating": 4.6,
+   "reviewCount": 22,
+   "isNew": true,
+   "featured": false,
+   "status": "published",
+   "seo": {
+    "metaTitle": "Dua Printed Khaddar Co-ord | Al Nain",
+    "metaDescription": "Printed co-ord set on featherweight khaddar — matched kurta and trouser."
+   },
+   "createdAt": "2026-08-02T13:01:42.729Z",
+   "updatedAt": "2026-08-19T13:01:42.729Z"
+  }
+ ],
+ "categories": [
+  {
+   "id": "c-dobby",
+   "slug": "embroidered-dobby",
+   "name": "Embroidered Dobby",
+   "parentId": null,
+   "image": "/images/duo-green-beige.jpg",
+   "description": "Hand-finished embroidery on textured dobby weave — kurtas, co-ords and festive suits.",
+   "status": "active"
+  },
+  {
+   "id": "c-khaddar",
+   "slug": "digital-printed-khaddar",
+   "name": "Digital Printed Khaddar",
+   "parentId": null,
+   "image": "/images/kurta-rust.jpg",
+   "description": "Signature digital prints on soft-washed khaddar — everyday ease to winter formals.",
+   "status": "active"
+  }
+ ],
+ "collections": [
+  {
+   "id": "col-new",
+   "slug": "new-arrivals",
+   "name": "New Arrivals",
+   "description": "Fresh from the atelier — this week’s newest pieces.",
+   "image": "/images/kurta-green.jpg",
+   "active": true,
+   "featured": true,
+   "productIds": [
+    "p1",
+    "p2",
+    "p7",
+    "p13",
+    "p16"
+   ]
+  },
+  {
+   "id": "col-best",
+   "slug": "best-sellers",
+   "name": "Best Sellers",
+   "description": "The pieces our customers keep coming back for.",
+   "image": "/images/duo-green-beige.jpg",
+   "active": true,
+   "featured": true,
+   "productIds": [
+    "p2",
+    "p3",
+    "p6",
+    "p9",
+    "p10"
+   ]
+  },
+  {
+   "id": "col-eid",
+   "slug": "eid-edit",
+   "name": "The Eid Edit",
+   "description": "Embroidered dobby, zari and mirror-work for the days of Eid.",
+   "image": "/images/suit-maroon.jpg",
+   "active": true,
+   "featured": true,
+   "productIds": [
+    "p1",
+    "p3",
+    "p4",
+    "p8"
+   ]
+  },
+  {
+   "id": "col-festive",
+   "slug": "festive-formals",
+   "name": "Festive Formals",
+   "description": "Occasion-ready formals for the shaadi season and beyond.",
+   "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop",
+   "active": true,
+   "featured": false,
+   "productIds": [
+    "p4",
+    "p5",
+    "p7",
+    "p14"
+   ]
+  },
+  {
+   "id": "col-prints",
+   "slug": "signature-prints",
+   "name": "Signature Prints",
+   "description": "Al Nain’s own digital prints on premium khaddar.",
+   "image": "/images/kurta-rust.jpg",
+   "active": true,
+   "featured": true,
+   "productIds": [
+    "p10",
+    "p11",
+    "p13",
+    "p16"
+   ]
+  },
+  {
+   "id": "col-winter",
+   "slug": "winter-edit",
+   "name": "Winter Khaddar Edit",
+   "description": "Heavier weaves and deep tones to keep the cold elegant.",
+   "image": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1600&auto=format&fit=crop",
+   "active": true,
+   "featured": false,
+   "productIds": [
+    "p9",
+    "p14",
+    "p15"
+   ]
+  },
+  {
+   "id": "col-premium",
+   "slug": "premium-heritage",
+   "name": "Premium Heritage",
+   "description": "Limited heirloom pieces — chikankari and hand embroidery.",
+   "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1600&auto=format&fit=crop",
+   "active": true,
+   "featured": false,
+   "productIds": [
+    "p1",
+    "p5",
+    "p6"
+   ]
+  }
+ ],
+ "users": [
+  {
+   "id": "u-admin",
+   "role": "admin",
+   "name": "Store Admin",
+   "email": "admin@alnain.pk",
+   "phone": "+92 300 0000001",
+   "password": "admin123",
+   "status": "active",
+   "createdAt": "2025-07-16T13:01:42.723Z",
+   "avatar": null,
+   "addresses": [],
+   "wishlist": []
+  },
+  {
+   "id": "u-sara",
+   "role": "customer",
+   "name": "Sara Khan",
+   "email": "sara@example.com",
+   "phone": "+92 300 1112223",
+   "password": "customer123",
+   "status": "active",
+   "createdAt": "2026-01-22T13:01:42.725Z",
+   "avatar": "https://i.pravatar.cc/100?img=47",
+   "addresses": [
+    {
+     "id": "a-s1",
+     "label": "Home",
+     "name": "Sara Khan",
+     "phone": "+92 300 1112223",
+     "country": "Pakistan",
+     "city": "Lahore",
+     "address": "House 24, Street 9, DHA Phase 5",
+     "apartment": "",
+     "postalCode": "54000",
+     "isDefault": true
+    },
+    {
+     "id": "a-s2",
+     "label": "Office",
+     "name": "Sara Khan",
+     "phone": "+92 300 1112223",
+     "country": "Pakistan",
+     "city": "Lahore",
+     "address": "Suite 301, Liberty Tower, Gulberg III",
+     "apartment": "3rd Floor",
+     "postalCode": "54660",
+     "isDefault": false
+    }
+   ],
+   "wishlist": [
+    "p1",
+    "p3",
+    "p7"
+   ]
+  },
+  {
+   "id": "u-ahmed",
+   "role": "customer",
+   "name": "Ahmed Raza",
+   "email": "ahmed@example.com",
+   "phone": "+92 321 4445556",
+   "password": "customer123",
+   "status": "active",
+   "createdAt": "2026-03-13T13:01:42.725Z",
+   "avatar": "https://i.pravatar.cc/100?img=12",
+   "addresses": [
+    {
+     "id": "a-a1",
+     "label": "Home",
+     "name": "Ahmed Raza",
+     "phone": "+92 321 4445556",
+     "country": "Pakistan",
+     "city": "Karachi",
+     "address": "Flat 7B, Sea View Apartments, Clifton Block 2",
+     "apartment": "7B",
+     "postalCode": "75600",
+     "isDefault": true
+    }
+   ],
+   "wishlist": [
+    "p9",
+    "p14"
+   ]
+  },
+  {
+   "id": "u-fatima",
+   "role": "customer",
+   "name": "Fatima Noor",
+   "email": "fatima@example.com",
+   "phone": "+92 333 7778889",
+   "password": "customer123",
+   "status": "active",
+   "createdAt": "2026-04-22T13:01:42.725Z",
+   "avatar": "https://i.pravatar.cc/100?img=31",
+   "addresses": [
+    {
+     "id": "a-f1",
+     "label": "Home",
+     "name": "Fatima Noor",
+     "phone": "+92 333 7778889",
+     "country": "Pakistan",
+     "city": "Islamabad",
+     "address": "House 12, Street 30, F-8/1",
+     "apartment": "",
+     "postalCode": "44000",
+     "isDefault": true
+    }
+   ],
+   "wishlist": [
+    "p7"
+   ]
+  },
+  {
+   "id": "u-hina",
+   "role": "customer",
+   "name": "Hina Shah",
+   "email": "hina@example.com",
+   "phone": "+92 345 2223334",
+   "password": "customer123",
+   "status": "active",
+   "createdAt": "2026-05-22T13:01:42.725Z",
+   "avatar": "https://i.pravatar.cc/100?img=25",
+   "addresses": [
+    {
+     "id": "a-h1",
+     "label": "Home",
+     "name": "Hina Shah",
+     "phone": "+92 345 2223334",
+     "country": "Pakistan",
+     "city": "Faisalabad",
+     "address": "P-234, Peoples Colony No 1",
+     "apartment": "",
+     "postalCode": "38000",
+     "isDefault": true
+    }
+   ],
+   "wishlist": []
+  },
+  {
+   "id": "u-bilal",
+   "role": "customer",
+   "name": "Bilal Ahmed",
+   "email": "bilal@example.com",
+   "phone": "+92 301 9990001",
+   "password": "customer123",
+   "status": "active",
+   "createdAt": "2026-06-21T13:01:42.725Z",
+   "avatar": "https://i.pravatar.cc/100?img=59",
+   "addresses": [
+    {
+     "id": "a-b1",
+     "label": "Home",
+     "name": "Bilal Ahmed",
+     "phone": "+92 301 9990001",
+     "country": "Pakistan",
+     "city": "Multan",
+     "address": "House 5, Gulgasht Colony",
+     "apartment": "",
+     "postalCode": "60000",
+     "isDefault": true
+    }
+   ],
+   "wishlist": [
+    "p16"
+   ]
+  },
+  {
+   "id": "u-zoya",
+   "role": "customer",
+   "name": "Zoya Malik",
+   "email": "zoya@example.com",
+   "phone": "+92 302 5556667",
+   "password": "customer123",
+   "status": "disabled",
+   "createdAt": "2025-10-24T13:01:42.725Z",
+   "avatar": null,
+   "addresses": [],
+   "wishlist": []
+  }
+ ],
+ "orders": [
+  {
+   "id": "o-1001",
+   "number": "ALN-1001",
+   "customerId": "u-sara",
+   "customerName": "Sara Khan",
+   "email": "sara@example.com",
+   "phone": "+92 300 1112223",
+   "items": [
+    {
+     "productId": "p1",
+     "variantId": "aln-001-maroon-s",
+     "name": "Gulnar Embroidered Dobby Suit",
+     "slug": "gulnar-embroidered-dobby-suit",
+     "sku": "ALN-001-MAS",
+     "image": "/images/suit-maroon.jpg",
+     "options": {
+      "Color": "Maroon",
+      "Size": "S"
+     },
+     "price": 4290,
+     "qty": 1,
+     "total": 4290,
+     "category": "embroidered-dobby"
+    },
+    {
+     "productId": "p9",
+     "variantId": "aln-009-rust-s",
+     "name": "Zarlish Digital Printed Khaddar Suit",
+     "slug": "zarlish-digital-printed-khaddar-suit",
+     "sku": "ALN-009-RUS",
+     "image": "/images/kurta-rust.jpg",
+     "options": {
+      "Color": "Rust",
+      "Size": "S"
+     },
+     "price": 2790,
+     "qty": 2,
+     "total": 5580,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 9870,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 494,
+   "total": 10364,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "pending",
+   "shippingAddress": {
+    "id": "a-s1",
+    "label": "Home",
+    "name": "Sara Khan",
+    "phone": "+92 300 1112223",
+    "country": "Pakistan",
+    "city": "Lahore",
+    "address": "House 24, Street 9, DHA Phase 5",
+    "apartment": "",
+    "postalCode": "54000",
+    "isDefault": true
+   },
+   "trackingNumber": null,
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-19T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-19T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1002",
+   "number": "ALN-1002",
+   "customerId": "u-ahmed",
+   "customerName": "Ahmed Raza",
+   "email": "ahmed@example.com",
+   "phone": "+92 321 4445556",
+   "items": [
+    {
+     "productId": "p14",
+     "variantId": "aln-014-maroon-m",
+     "name": "Nooriya Winter Khaddar Suit",
+     "slug": "nooriya-winter-khaddar-suit",
+     "sku": "ALN-014-MAM",
+     "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Maroon",
+      "Size": "M"
+     },
+     "price": 3390,
+     "qty": 1,
+     "total": 3390,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 3390,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 250,
+   "tax": 170,
+   "total": 3810,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "confirmed",
+   "shippingAddress": {
+    "id": "a-a1",
+    "label": "Home",
+    "name": "Ahmed Raza",
+    "phone": "+92 321 4445556",
+    "country": "Pakistan",
+    "city": "Karachi",
+    "address": "Flat 7B, Sea View Apartments, Clifton Block 2",
+    "apartment": "7B",
+    "postalCode": "75600",
+    "isDefault": true
+   },
+   "trackingNumber": null,
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-18T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-19T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-18T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1003",
+   "number": "ALN-1003",
+   "customerId": "u-fatima",
+   "customerName": "Fatima Noor",
+   "email": "fatima@example.com",
+   "phone": "+92 333 7778889",
+   "items": [
+    {
+     "productId": "p7",
+     "variantId": "aln-007-ivory-s",
+     "name": "Roshanay Luxe Dobby Formal",
+     "slug": "roshanay-luxe-dobby-formal",
+     "sku": "ALN-007-IVS",
+     "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Ivory",
+      "Size": "S"
+     },
+     "price": 8490,
+     "qty": 1,
+     "total": 8490,
+     "category": "embroidered-dobby"
+    }
+   ],
+   "subtotal": 8490,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 425,
+   "total": 8915,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "processing",
+   "shippingAddress": {
+    "id": "a-f1",
+    "label": "Home",
+    "name": "Fatima Noor",
+    "phone": "+92 333 7778889",
+    "country": "Pakistan",
+    "city": "Islamabad",
+    "address": "House 12, Street 30, F-8/1",
+    "apartment": "",
+    "postalCode": "44000",
+    "isDefault": true
+   },
+   "trackingNumber": null,
+   "notes": [
+    {
+     "id": "n-1003",
+     "text": "Customer requested extra sleeve length.",
+     "at": "2026-08-17T13:01:42.730Z",
+     "by": "Store Admin"
+    }
+   ],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-17T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-18T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-19T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-17T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1004",
+   "number": "ALN-1004",
+   "customerId": "u-hina",
+   "customerName": "Hina Shah",
+   "email": "hina@example.com",
+   "phone": "+92 345 2223334",
+   "items": [
+    {
+     "productId": "p2",
+     "variantId": "aln-002-sage-xs",
+     "name": "Mehrbano Pearl Button Dobby Kurta",
+     "slug": "mehrbano-pearl-button-dobby-kurta",
+     "sku": "ALN-002-SAXS",
+     "image": "/images/kurta-green.jpg",
+     "options": {
+      "Color": "Sage",
+      "Size": "XS"
+     },
+     "price": 3490,
+     "qty": 2,
+     "total": 6980,
+     "category": "embroidered-dobby"
+    },
+    {
+     "productId": "p11",
+     "variantId": "aln-011-white-xs",
+     "name": "Dilnaz Printed Khaddar 2-Piece",
+     "slug": "dilnaz-printed-khaddar-2-piece",
+     "sku": "ALN-011-WHXS",
+     "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "White",
+      "Size": "XS"
+     },
+     "price": 2490,
+     "qty": 1,
+     "total": 2490,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 9470,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 474,
+   "total": 9944,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "processing",
+   "shippingAddress": {
+    "id": "a-h1",
+    "label": "Home",
+    "name": "Hina Shah",
+    "phone": "+92 345 2223334",
+    "country": "Pakistan",
+    "city": "Faisalabad",
+    "address": "P-234, Peoples Colony No 1",
+    "apartment": "",
+    "postalCode": "38000",
+    "isDefault": true
+   },
+   "trackingNumber": null,
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-16T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-17T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-18T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-16T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1005",
+   "number": "ALN-1005",
+   "customerId": "u-sara",
+   "customerName": "Sara Khan",
+   "email": "sara@example.com",
+   "phone": "+92 300 1112223",
+   "items": [
+    {
+     "productId": "p4",
+     "variantId": "aln-004-gold-m",
+     "name": "Anaya Festive Embroidered Dobby",
+     "slug": "anaya-festive-embroidered-dobby",
+     "sku": "ALN-004-GOM",
+     "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Gold",
+      "Size": "M"
+     },
+     "price": 6990,
+     "qty": 1,
+     "total": 6990,
+     "category": "embroidered-dobby"
+    }
+   ],
+   "subtotal": 6990,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 350,
+   "total": 7340,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "shipped",
+   "shippingAddress": {
+    "id": "a-s1",
+    "label": "Home",
+    "name": "Sara Khan",
+    "phone": "+92 300 1112223",
+    "country": "Pakistan",
+    "city": "Lahore",
+    "address": "House 24, Street 9, DHA Phase 5",
+    "apartment": "",
+    "postalCode": "54000",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785005",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-14T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-15T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-16T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-08-17T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-14T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1006",
+   "number": "ALN-1006",
+   "customerId": "u-bilal",
+   "customerName": "Bilal Ahmed",
+   "email": "bilal@example.com",
+   "phone": "+92 301 9990001",
+   "items": [
+    {
+     "productId": "p16",
+     "variantId": "aln-016-blush-s",
+     "name": "Dua Printed Khaddar Co-ord",
+     "slug": "dua-printed-khaddar-co-ord",
+     "sku": "ALN-016-BLS",
+     "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Blush",
+      "Size": "S"
+     },
+     "price": 4290,
+     "qty": 1,
+     "total": 4290,
+     "category": "digital-printed-khaddar"
+    },
+    {
+     "productId": "p12",
+     "variantId": "aln-012-beige-s",
+     "name": "Sehr Everyday Printed Khaddar",
+     "slug": "sehr-everyday-printed-khaddar",
+     "sku": "ALN-012-BES",
+     "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Beige",
+      "Size": "S"
+     },
+     "price": 2790,
+     "qty": 1,
+     "total": 2790,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 7080,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 354,
+   "total": 7434,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "shipped",
+   "shippingAddress": {
+    "id": "a-b1",
+    "label": "Home",
+    "name": "Bilal Ahmed",
+    "phone": "+92 301 9990001",
+    "country": "Pakistan",
+    "city": "Multan",
+    "address": "House 5, Gulgasht Colony",
+    "apartment": "",
+    "postalCode": "60000",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785006",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-12T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-13T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-14T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-08-15T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-12T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1007",
+   "number": "ALN-1007",
+   "customerId": "u-sara",
+   "customerName": "Sara Khan",
+   "email": "sara@example.com",
+   "phone": "+92 300 1112223",
+   "items": [
+    {
+     "productId": "p5",
+     "variantId": "aln-005-emerald-m",
+     "name": "Mahjabeen Zari Dobby Suit",
+     "slug": "mahjabeen-zari-dobby-suit",
+     "sku": "ALN-005-EMM",
+     "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Emerald",
+      "Size": "M"
+     },
+     "price": 7490,
+     "qty": 1,
+     "total": 7490,
+     "category": "embroidered-dobby"
+    }
+   ],
+   "subtotal": 7490,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "express",
+   "shipping": 500,
+   "tax": 375,
+   "total": 8365,
+   "paymentMethod": "cod",
+   "paymentStatus": "paid",
+   "status": "delivered",
+   "shippingAddress": {
+    "id": "a-s1",
+    "label": "Home",
+    "name": "Sara Khan",
+    "phone": "+92 300 1112223",
+    "country": "Pakistan",
+    "city": "Lahore",
+    "address": "House 24, Street 9, DHA Phase 5",
+    "apartment": "",
+    "postalCode": "54000",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785007",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-09T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-10T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-11T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-08-12T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-08-13T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-09T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-13T13:01:42.730Z"
+  },
+  {
+   "id": "o-1008",
+   "number": "ALN-1008",
+   "customerId": "u-ahmed",
+   "customerName": "Ahmed Raza",
+   "email": "ahmed@example.com",
+   "phone": "+92 321 4445556",
+   "items": [
+    {
+     "productId": "p3",
+     "variantId": "aln-003-sage-s",
+     "name": "Inara Embroidered Dobby Co-ord",
+     "slug": "inara-embroidered-dobby-co-ord",
+     "sku": "ALN-003-SAS",
+     "image": "/images/duo-green-beige.jpg",
+     "options": {
+      "Color": "Sage",
+      "Size": "S"
+     },
+     "price": 4790,
+     "qty": 1,
+     "total": 4790,
+     "category": "embroidered-dobby"
+    },
+    {
+     "productId": "p10",
+     "variantId": "aln-010-mustard-xs",
+     "name": "Farah Signature Print Khaddar",
+     "slug": "farah-signature-print-khaddar",
+     "sku": "ALN-010-MUXS",
+     "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Mustard",
+      "Size": "XS"
+     },
+     "price": 2990,
+     "qty": 1,
+     "total": 2990,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 7780,
+   "discount": 778,
+   "couponCode": "EID10",
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 350,
+   "total": 7352,
+   "paymentMethod": "cod",
+   "paymentStatus": "paid",
+   "status": "delivered",
+   "shippingAddress": {
+    "id": "a-a1",
+    "label": "Home",
+    "name": "Ahmed Raza",
+    "phone": "+92 321 4445556",
+    "country": "Pakistan",
+    "city": "Karachi",
+    "address": "Flat 7B, Sea View Apartments, Clifton Block 2",
+    "apartment": "7B",
+    "postalCode": "75600",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785008",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-06T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-07T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-08T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-08-09T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-08-10T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-06T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-10T13:01:42.730Z"
+  },
+  {
+   "id": "o-1009",
+   "number": "ALN-1009",
+   "customerId": "u-fatima",
+   "customerName": "Fatima Noor",
+   "email": "fatima@example.com",
+   "phone": "+92 333 7778889",
+   "items": [
+    {
+     "productId": "p13",
+     "variantId": "aln-013-black-s",
+     "name": "Shabnam Floral Khaddar Suit",
+     "slug": "shabnam-floral-khaddar-suit",
+     "sku": "ALN-013-BLS",
+     "image": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Black",
+      "Size": "S"
+     },
+     "price": 3490,
+     "qty": 1,
+     "total": 3490,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 3490,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 250,
+   "tax": 175,
+   "total": 3915,
+   "paymentMethod": "cod",
+   "paymentStatus": "paid",
+   "status": "delivered",
+   "shippingAddress": {
+    "id": "a-f1",
+    "label": "Home",
+    "name": "Fatima Noor",
+    "phone": "+92 333 7778889",
+    "country": "Pakistan",
+    "city": "Islamabad",
+    "address": "House 12, Street 30, F-8/1",
+    "apartment": "",
+    "postalCode": "44000",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785009",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-08-02T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-08-03T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-08-04T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-08-05T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-08-06T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-08-02T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-06T13:01:42.730Z"
+  },
+  {
+   "id": "o-1010",
+   "number": "ALN-1010",
+   "customerId": "u-hina",
+   "customerName": "Hina Shah",
+   "email": "hina@example.com",
+   "phone": "+92 345 2223334",
+   "items": [
+    {
+     "productId": "p10",
+     "variantId": "aln-010-mustard-xs",
+     "name": "Farah Signature Print Khaddar",
+     "slug": "farah-signature-print-khaddar",
+     "sku": "ALN-010-MUXS",
+     "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Mustard",
+      "Size": "XS"
+     },
+     "price": 2990,
+     "qty": 2,
+     "total": 5980,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 5980,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 299,
+   "total": 6279,
+   "paymentMethod": "cod",
+   "paymentStatus": "paid",
+   "status": "delivered",
+   "shippingAddress": {
+    "id": "a-h1",
+    "label": "Home",
+    "name": "Hina Shah",
+    "phone": "+92 345 2223334",
+    "country": "Pakistan",
+    "city": "Faisalabad",
+    "address": "P-234, Peoples Colony No 1",
+    "apartment": "",
+    "postalCode": "38000",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785010",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-07-29T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-07-30T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-07-31T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-08-01T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-08-02T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-07-29T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-02T13:01:42.730Z"
+  },
+  {
+   "id": "o-1011",
+   "number": "ALN-1011",
+   "customerId": "u-bilal",
+   "customerName": "Bilal Ahmed",
+   "email": "bilal@example.com",
+   "phone": "+92 301 9990001",
+   "items": [
+    {
+     "productId": "p8",
+     "variantId": "aln-008-teal-s",
+     "name": "Meher Mirror-work Dobby Suit",
+     "slug": "meher-mirror-work-dobby-suit",
+     "sku": "ALN-008-TES",
+     "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Teal",
+      "Size": "S"
+     },
+     "price": 5190,
+     "qty": 1,
+     "total": 5190,
+     "category": "embroidered-dobby"
+    }
+   ],
+   "subtotal": 5190,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 0,
+   "tax": 260,
+   "total": 5450,
+   "paymentMethod": "cod",
+   "paymentStatus": "pending",
+   "status": "cancelled",
+   "shippingAddress": {
+    "id": "a-b1",
+    "label": "Home",
+    "name": "Bilal Ahmed",
+    "phone": "+92 301 9990001",
+    "country": "Pakistan",
+    "city": "Multan",
+    "address": "House 5, Gulgasht Colony",
+    "apartment": "",
+    "postalCode": "60000",
+    "isDefault": true
+   },
+   "trackingNumber": null,
+   "notes": [
+    {
+     "id": "n-1011",
+     "text": "Cancelled on customer request — size unavailable.",
+     "at": "2026-07-25T13:01:42.730Z",
+     "by": "Store Admin"
+    }
+   ],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-07-25T13:01:42.730Z"
+    },
+    {
+     "label": "Order cancelled",
+     "at": "2026-07-26T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-07-25T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1012",
+   "number": "ALN-1012",
+   "customerId": "u-sara",
+   "customerName": "Sara Khan",
+   "email": "sara@example.com",
+   "phone": "+92 300 1112223",
+   "items": [
+    {
+     "productId": "p6",
+     "variantId": "aln-006-white-s",
+     "name": "Gulbahar Chikankari Dobby Kurta",
+     "slug": "gulbahar-chikankari-dobby-kurta",
+     "sku": "ALN-006-WHS",
+     "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "White",
+      "Size": "S"
+     },
+     "price": 4290,
+     "qty": 1,
+     "total": 4290,
+     "category": "embroidered-dobby"
+    }
+   ],
+   "subtotal": 4290,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 250,
+   "tax": 215,
+   "total": 4755,
+   "paymentMethod": "cod",
+   "paymentStatus": "paid",
+   "status": "delivered",
+   "shippingAddress": {
+    "id": "a-s1",
+    "label": "Home",
+    "name": "Sara Khan",
+    "phone": "+92 300 1112223",
+    "country": "Pakistan",
+    "city": "Lahore",
+    "address": "House 24, Street 9, DHA Phase 5",
+    "apartment": "",
+    "postalCode": "54000",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785012",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-07-21T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-07-22T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-07-23T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-07-24T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-07-25T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-07-21T13:01:42.730Z",
+   "estimatedDelivery": "2026-07-25T13:01:42.730Z"
+  },
+  {
+   "id": "o-1013",
+   "number": "ALN-1013",
+   "customerId": "u-ahmed",
+   "customerName": "Ahmed Raza",
+   "email": "ahmed@example.com",
+   "phone": "+92 321 4445556",
+   "items": [
+    {
+     "productId": "p15",
+     "variantId": "aln-015-olive-s",
+     "name": "Zaray Digital Print Khaddar Kurta",
+     "slug": "zaray-digital-print-khaddar-kurta",
+     "sku": "ALN-015-OLS",
+     "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Olive",
+      "Size": "S"
+     },
+     "price": 2690,
+     "qty": 1,
+     "total": 2690,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 2690,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 250,
+   "tax": 135,
+   "total": 3075,
+   "paymentMethod": "cod",
+   "paymentStatus": "refunded",
+   "status": "returned",
+   "shippingAddress": {
+    "id": "a-a1",
+    "label": "Home",
+    "name": "Ahmed Raza",
+    "phone": "+92 321 4445556",
+    "country": "Pakistan",
+    "city": "Karachi",
+    "address": "Flat 7B, Sea View Apartments, Clifton Block 2",
+    "apartment": "7B",
+    "postalCode": "75600",
+    "isDefault": true
+   },
+   "trackingNumber": "TCS-785013",
+   "notes": [
+    {
+     "id": "n-1013",
+     "text": "Colour difference claimed; refund issued.",
+     "at": "2026-07-17T13:01:42.730Z",
+     "by": "Store Admin"
+    }
+   ],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-07-17T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-07-18T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-07-19T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-07-20T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-07-21T13:01:42.730Z"
+    },
+    {
+     "label": "Return processed",
+     "at": "2026-07-22T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-07-17T13:01:42.730Z",
+   "estimatedDelivery": "2026-08-24T13:01:42.730Z"
+  },
+  {
+   "id": "o-1014",
+   "number": "ALN-1014",
+   "customerId": null,
+   "customerName": "Guest Customer",
+   "email": "guest@example.com",
+   "phone": "+92 300 7654321",
+   "items": [
+    {
+     "productId": "p14",
+     "variantId": "aln-014-maroon-s",
+     "name": "Nooriya Winter Khaddar Suit",
+     "slug": "nooriya-winter-khaddar-suit",
+     "sku": "ALN-014-MAS",
+     "image": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&auto=format&fit=crop",
+     "options": {
+      "Color": "Maroon",
+      "Size": "S"
+     },
+     "price": 3390,
+     "qty": 1,
+     "total": 3390,
+     "category": "digital-printed-khaddar"
+    }
+   ],
+   "subtotal": 3390,
+   "discount": 0,
+   "couponCode": null,
+   "shippingMethod": "standard",
+   "shipping": 250,
+   "tax": 170,
+   "total": 3810,
+   "paymentMethod": "cod",
+   "paymentStatus": "paid",
+   "status": "delivered",
+   "shippingAddress": {
+    "name": "Guest Customer",
+    "phone": "+92 300 7654321",
+    "country": "Pakistan",
+    "city": "Lahore",
+    "address": "House 1, Model Town",
+    "apartment": "",
+    "postalCode": "54000"
+   },
+   "trackingNumber": "TCS-785014",
+   "notes": [],
+   "timeline": [
+    {
+     "label": "Order placed",
+     "at": "2026-07-13T13:01:42.730Z"
+    },
+    {
+     "label": "Order confirmed",
+     "at": "2026-07-14T13:01:42.730Z"
+    },
+    {
+     "label": "Being stitched & packed",
+     "at": "2026-07-15T13:01:42.730Z"
+    },
+    {
+     "label": "Handed to courier",
+     "at": "2026-07-16T13:01:42.730Z"
+    },
+    {
+     "label": "Delivered",
+     "at": "2026-07-17T13:01:42.730Z"
+    }
+   ],
+   "createdAt": "2026-07-13T13:01:42.730Z",
+   "estimatedDelivery": "2026-07-17T13:01:42.730Z"
+  }
+ ],
+ "reviews": [
+  {
+   "id": "r-1",
+   "productId": "p1",
+   "customerName": "Mahnoor A.",
+   "rating": 5,
+   "title": "Absolutely stunning",
+   "text": "The embroidery is even better in person. Wore it on Eid and got endless compliments. True to size.",
+   "status": "approved",
+   "createdAt": "2026-08-16T13:01:42.731Z"
+  },
+  {
+   "id": "r-2",
+   "productId": "p1",
+   "customerName": "Rabia S.",
+   "rating": 4,
+   "title": "Beautiful but delicate",
+   "text": "Gorgeous suit — just handle the embroidered borders with care, the work is fine and detailed.",
+   "status": "approved",
+   "createdAt": "2026-08-08T13:01:42.731Z"
+  },
+  {
+   "id": "r-3",
+   "productId": "p2",
+   "customerName": "Amna T.",
+   "rating": 5,
+   "title": "The pearl buttons!",
+   "text": "The tassel buttons are such a beautiful detail. Dobby fabric feels premium, fits perfectly.",
+   "status": "approved",
+   "createdAt": "2026-08-12T13:01:42.731Z"
+  },
+  {
+   "id": "r-4",
+   "productId": "p3",
+   "customerName": "Khadija R.",
+   "rating": 5,
+   "title": "Bought both colours",
+   "text": "My sister and I got the sage and beige — the co-ord fits beautifully and the embroidery is neat.",
+   "status": "approved",
+   "createdAt": "2026-07-31T13:01:42.731Z"
+  },
+  {
+   "id": "r-5",
+   "productId": "p6",
+   "customerName": "Farhat U.",
+   "rating": 5,
+   "title": "Heirloom quality",
+   "text": "Real chikankari, not machine imitation. My mother approved — highest possible praise.",
+   "status": "approved",
+   "createdAt": "2026-08-02T13:01:42.731Z"
+  },
+  {
+   "id": "r-6",
+   "productId": "p7",
+   "customerName": "Zainab W.",
+   "rating": 5,
+   "title": "Bridal-worthy",
+   "text": "Wore it at my nikkah. Featherlight and the dabka work is couture level.",
+   "status": "approved",
+   "createdAt": "2026-07-26T13:01:42.731Z"
+  },
+  {
+   "id": "r-7",
+   "productId": "p7",
+   "customerName": "Maryam J.",
+   "rating": 4,
+   "title": "Elegant",
+   "text": "Beautiful piece. Delivery took a day longer than promised, hence 4 stars.",
+   "status": "approved",
+   "createdAt": "2026-07-11T13:01:42.731Z"
+  },
+  {
+   "id": "r-8",
+   "productId": "p8",
+   "customerName": "Hira B.",
+   "rating": 5,
+   "title": "Mirror work catches every light",
+   "text": "Slightly snug on the arms, size up if in doubt — but absolutely worth it.",
+   "status": "approved",
+   "createdAt": "2026-08-14T13:01:42.731Z"
+  },
+  {
+   "id": "r-9",
+   "productId": "p9",
+   "customerName": "Nida K.",
+   "rating": 4,
+   "title": "Great daily wear",
+   "text": "Soft khaddar, generous fit. The rust print is beautiful in daylight.",
+   "status": "approved",
+   "createdAt": "2026-08-05T13:01:42.731Z"
+  },
+  {
+   "id": "r-10",
+   "productId": "p9",
+   "customerName": "Sana M.",
+   "rating": 5,
+   "title": "Third one I bought",
+   "text": "This is my third Zarlish suit. Says everything.",
+   "status": "approved",
+   "createdAt": "2026-07-21T13:01:42.731Z"
+  },
+  {
+   "id": "r-11",
+   "productId": "p10",
+   "customerName": "Ayesha L.",
+   "rating": 4,
+   "title": "Lovely print",
+   "text": "The signature print looks exactly like the photos. Fabric is soft after first wash.",
+   "status": "approved",
+   "createdAt": "2026-08-10T13:01:42.731Z"
+  },
+  {
+   "id": "r-12",
+   "productId": "p11",
+   "customerName": "Bushra Z.",
+   "rating": 4,
+   "title": "Everyday favourite",
+   "text": "Light, easy, and the pastel print goes with everything.",
+   "status": "approved",
+   "createdAt": "2026-08-11T13:01:42.731Z"
+  },
+  {
+   "id": "r-13",
+   "productId": "p13",
+   "customerName": "Neha P.",
+   "rating": 5,
+   "title": "Print quality is superb",
+   "text": "Dark florals look richer in person. No fading after wash.",
+   "status": "pending",
+   "createdAt": "2026-08-18T13:01:42.731Z"
+  },
+  {
+   "id": "r-14",
+   "productId": "p14",
+   "customerName": "Kiran D.",
+   "rating": 5,
+   "title": "Perfect for winter",
+   "text": "Warmer than expected and the maroon is regal. Dupatta print is gorgeous.",
+   "status": "approved",
+   "createdAt": "2026-08-15T13:01:42.731Z"
+  },
+  {
+   "id": "r-15",
+   "productId": "p14",
+   "customerName": "Adeela N.",
+   "rating": 4,
+   "title": "Good buy on sale",
+   "text": "Great value at the sale price. True to size.",
+   "status": "approved",
+   "createdAt": "2026-07-23T13:01:42.731Z"
+  },
+  {
+   "id": "r-16",
+   "productId": "p15",
+   "customerName": "Rimsha G.",
+   "rating": 4,
+   "title": "Nice kurta",
+   "text": "Earthy colours as pictured. Would love matching trousers as an option.",
+   "status": "approved",
+   "createdAt": "2026-08-09T13:01:42.731Z"
+  },
+  {
+   "id": "r-17",
+   "productId": "p16",
+   "customerName": "Laiba H.",
+   "rating": 5,
+   "title": "Co-ord goals",
+   "text": "The blush set is so pretty — got compliments at uni all day.",
+   "status": "pending",
+   "createdAt": "2026-08-17T13:01:42.731Z"
+  },
+  {
+   "id": "r-18",
+   "productId": "p4",
+   "customerName": "Saba Q.",
+   "rating": 3,
+   "title": "Shade slightly different",
+   "text": "Pretty suit but the gold is a shade deeper than the website photo.",
+   "status": "pending",
+   "createdAt": "2026-08-17T13:01:42.731Z"
+  },
+  {
+   "id": "r-19",
+   "productId": "p5",
+   "customerName": "Anonymous",
+   "rating": 1,
+   "title": "Spam review text",
+   "text": "Visit my page for cheap replicas!!!",
+   "status": "rejected",
+   "createdAt": "2026-08-13T13:01:42.731Z"
+  }
+ ],
+ "coupons": [
+  {
+   "id": "cp-1",
+   "code": "EID10",
+   "type": "percentage",
+   "value": 10,
+   "minOrder": 3000,
+   "maxDiscount": 1000,
+   "startsAt": "2026-07-31T13:01:42.725Z",
+   "expiresAt": "2026-09-19T13:01:42.725Z",
+   "usageLimit": 500,
+   "usedCount": 42,
+   "perCustomerLimit": 2,
+   "products": [],
+   "categories": [],
+   "active": true
+  },
+  {
+   "id": "cp-2",
+   "code": "WELCOME500",
+   "type": "fixed",
+   "value": 500,
+   "minOrder": 2500,
+   "maxDiscount": null,
+   "startsAt": "2026-05-22T13:01:42.725Z",
+   "expiresAt": "2027-02-16T13:01:42.725Z",
+   "usageLimit": 1000,
+   "usedCount": 218,
+   "perCustomerLimit": 1,
+   "products": [],
+   "categories": [],
+   "active": true
+  },
+  {
+   "id": "cp-3",
+   "code": "DOBBY15",
+   "type": "percentage",
+   "value": 15,
+   "minOrder": 6000,
+   "maxDiscount": 2000,
+   "startsAt": "2026-08-10T13:01:42.725Z",
+   "expiresAt": "2026-10-19T13:01:42.725Z",
+   "usageLimit": 200,
+   "usedCount": 12,
+   "perCustomerLimit": 1,
+   "products": [],
+   "categories": [
+    "embroidered-dobby"
+   ],
+   "active": true
+  },
+  {
+   "id": "cp-4",
+   "code": "SUMMER20",
+   "type": "percentage",
+   "value": 20,
+   "minOrder": 0,
+   "maxDiscount": 1500,
+   "startsAt": "2026-04-22T13:01:42.725Z",
+   "expiresAt": "2026-08-15T13:01:42.725Z",
+   "usageLimit": 300,
+   "usedCount": 300,
+   "perCustomerLimit": 1,
+   "products": [],
+   "categories": [],
+   "active": false
+  }
+ ],
+ "banners": [
+  {
+   "id": "bn-1",
+   "placement": "hero",
+   "heading": "Heritage in Every Thread",
+   "description": "Embroidered dobby and digital printed khaddar — crafted in Islamabad, delivered nationwide with cash on delivery.",
+   "buttonText": "Shop Now",
+   "buttonUrl": "/shop",
+   "secondaryText": "Explore Collection",
+   "secondaryUrl": "/collections",
+   "image": "/images/hero-banner.png",
+   "align": "right",
+   "position": 1,
+   "startsAt": null,
+   "endsAt": null,
+   "active": true
+  },
+  {
+   "id": "bn-2",
+   "placement": "hero",
+   "heading": "The Eid Edit",
+   "description": "Zari, tilla and mirror work — set by hand for the days that matter.",
+   "buttonText": "Shop The Edit",
+   "buttonUrl": "/collections/eid-edit",
+   "secondaryText": "Shop All",
+   "secondaryUrl": "/shop",
+   "image": "/images/suit-maroon.jpg",
+   "align": "left",
+   "position": 2,
+   "startsAt": null,
+   "endsAt": null,
+   "active": false
+  },
+  {
+   "id": "bn-3",
+   "placement": "promo",
+   "heading": "The Embroidered Dobby Edit",
+   "description": "Hand-embroidered maroon and gold on textured dobby weave — pieces made for the season’s evenings.",
+   "buttonText": "Shop Embroidered Dobby",
+   "buttonUrl": "/shop/embroidered-dobby",
+   "secondaryText": "",
+   "secondaryUrl": "",
+   "image": "/images/suit-maroon.jpg",
+   "position": 1,
+   "startsAt": null,
+   "endsAt": null,
+   "active": true
+  }
+ ],
+ "socialLinks": [
+  {
+   "id": "sl-1",
+   "platform": "instagram",
+   "label": "Instagram",
+   "url": "https://instagram.com/alnain.pk",
+   "active": true,
+   "order": 1
+  },
+  {
+   "id": "sl-2",
+   "platform": "facebook",
+   "label": "Facebook",
+   "url": "https://facebook.com/alnain.pk",
+   "active": true,
+   "order": 2
+  },
+  {
+   "id": "sl-3",
+   "platform": "tiktok",
+   "label": "TikTok",
+   "url": "https://tiktok.com/@alnain.pk",
+   "active": true,
+   "order": 3
+  },
+  {
+   "id": "sl-4",
+   "platform": "youtube",
+   "label": "YouTube",
+   "url": "https://youtube.com/@alnain",
+   "active": true,
+   "order": 4
+  },
+  {
+   "id": "sl-5",
+   "platform": "whatsapp",
+   "label": "WhatsApp",
+   "url": "https://wa.me/923001234567",
+   "active": true,
+   "order": 5
+  },
+  {
+   "id": "sl-6",
+   "platform": "pinterest",
+   "label": "Pinterest",
+   "url": "https://pinterest.com/alnain",
+   "active": false,
+   "order": 6
+  },
+  {
+   "id": "sl-7",
+   "platform": "twitter",
+   "label": "X / Twitter",
+   "url": "https://x.com/alnain",
+   "active": false,
+   "order": 7
+  }
+ ],
+ "testimonials": [
+  {
+   "id": "t-1",
+   "name": "Mahnoor Ali",
+   "city": "Lahore",
+   "rating": 5,
+   "text": "Al Nain has become my go-to for every Eid and shaadi. The embroidery quality rivals designer houses at twice the price.",
+   "avatar": "https://i.pravatar.cc/100?img=44"
+  },
+  {
+   "id": "t-2",
+   "name": "Ayesha Raza",
+   "city": "Islamabad",
+   "rating": 5,
+   "text": "The khaddar prints are unmatched. Colours stay fresh wash after wash, and delivery is always on time.",
+   "avatar": "https://i.pravatar.cc/100?img=32"
+  },
+  {
+   "id": "t-3",
+   "name": "Kiran Fatima",
+   "city": "Karachi",
+   "rating": 5,
+   "text": "Ordered two dobby co-ords with cash on delivery — the fit was perfect and the pearl-button detailing is beautiful.",
+   "avatar": "https://i.pravatar.cc/100?img=25"
+  },
+  {
+   "id": "t-4",
+   "name": "Hassan Javed",
+   "city": "Multan",
+   "rating": 4,
+   "text": "Ordered for my wife and sister — premium fabric, honest sizing, and COD nationwide. Exactly how online shopping should work in Pakistan.",
+   "avatar": "https://i.pravatar.cc/100?img=68"
+  }
+ ],
+ "messages": [
+  {
+   "id": "msg-1",
+   "name": "Mahira Aslam",
+   "email": "mahira@example.com",
+   "message": "Do you offer custom stitching for the Roshanay dobby formal? I need a slightly longer kameez length for a December barat.",
+   "status": "new",
+   "createdAt": "2026-08-19T13:01:42.725Z"
+  },
+  {
+   "id": "msg-2",
+   "name": "Usman Tariq",
+   "email": "usman@example.com",
+   "message": "My order arrived a day early — the quality is fantastic. Do you offer gift packaging for Eid orders?",
+   "status": "read",
+   "createdAt": "2026-08-16T13:01:42.725Z"
+  }
+ ],
+ "newsletter": [],
+ "meta": {
+  "orderSeq": 1015
+ }
+}

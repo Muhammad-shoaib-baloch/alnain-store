@@ -1,0 +1,15 @@
+# Al Nain API
+Options -Indexes
+
+# never serve these directly
+<FilesMatch "^(config\.php|config\.sample\.php|lib\.php|schema\.php|seed\.json|dev\.sqlite|\.installed)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # real files (uploads, setup.php, index.php) are served directly;
+  # every other /api/* request goes to the router
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule . index.php [L]
+</IfModule>

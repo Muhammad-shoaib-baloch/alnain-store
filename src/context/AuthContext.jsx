@@ -1,4 +1,5 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import { subscribe } from '@/lib/db'
 import * as authSvc from '@/services/auth'
 
 const AuthContext = createContext(null)
@@ -10,20 +11,23 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => authSvc.currentUser())
 
-  const login = useCallback((email, password) => {
-    const u = authSvc.login(email, password)
+  // stay in sync with snapshot refreshes (live mode)
+  useEffect(() => subscribe(() => setUser(authSvc.currentUser())), [])
+
+  const login = useCallback(async (email, password) => {
+    const u = await authSvc.login(email, password)
     setUser(u)
     return u
   }, [])
 
-  const register = useCallback((payload) => {
-    const u = authSvc.register(payload)
+  const register = useCallback(async (payload) => {
+    const u = await authSvc.register(payload)
     setUser(u)
     return u
   }, [])
 
-  const logout = useCallback(() => {
-    authSvc.logout()
+  const logout = useCallback(async () => {
+    await authSvc.logout()
     setUser(null)
   }, [])
 

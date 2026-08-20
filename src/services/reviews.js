@@ -1,4 +1,5 @@
-import { getDB, commit } from '@/lib/db'
+import { getDB, commit, isLive, rehydrate } from '@/lib/db'
+import { api } from '@/lib/api'
 import { uid } from '@/lib/format'
 
 export function listProductReviews(productId) {
@@ -20,7 +21,12 @@ export function reviewSummary(product) {
   }
 }
 
-export function addReview({ productId, rating, title, text, customerName, customerId }) {
+export async function addReview({ productId, rating, title, text, customerName, customerId }) {
+  if (isLive()) {
+    const { review } = await api('/reviews', { method: 'POST', body: { productId, rating, title, text } })
+    await rehydrate()
+    return review
+  }
   const db = getDB()
   const review = {
     id: uid('r'),
@@ -57,7 +63,12 @@ export function listAllReviews({ q, status, rating } = {}) {
   return items
 }
 
-export function setReviewStatus(id, status) {
+export async function setReviewStatus(id, status) {
+  if (isLive()) {
+    await api(`/admin/reviews/${id}`, { method: 'PATCH', body: { status } })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   const review = db.reviews.find((r) => r.id === id)
   if (review) {
@@ -66,7 +77,12 @@ export function setReviewStatus(id, status) {
   }
 }
 
-export function deleteReview(id) {
+export async function deleteReview(id) {
+  if (isLive()) {
+    await api(`/admin/reviews/${id}`, { method: 'DELETE' })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   db.reviews = db.reviews.filter((r) => r.id !== id)
   commit()

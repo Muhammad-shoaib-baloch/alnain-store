@@ -27,12 +27,16 @@ export default function AdminCollections() {
   const collections = getCollections()
   const allProducts = getProducts({ includeAllStatuses: true, perPage: 1000 }).items
 
-  const save = (e) => {
+  const save = async (e) => {
     e?.preventDefault()
     if (editing.name.trim().length < 2) return toast('Collection name is required.', 'error')
-    saveCollection({ ...editing, slug: editing.slug || slugify(editing.name) })
-    toast(editing.id ? 'Collection updated.' : 'Collection created.')
-    setEditing(null)
+    try {
+      await saveCollection({ ...editing, slug: editing.slug || slugify(editing.name) })
+      toast(editing.id ? 'Collection updated.' : 'Collection created.')
+      setEditing(null)
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const remove = async (col) => {
@@ -41,12 +45,12 @@ export default function AdminCollections() {
       message: 'Products stay in the catalogue — they are only removed from this collection.',
     })
     if (!ok) return
-    deleteCollection(col.id)
+    await deleteCollection(col.id)
     toast('Collection deleted.', 'info')
   }
 
-  const toggleActive = (col) => {
-    saveCollection({ ...col, active: !col.active })
+  const toggleActive = async (col) => {
+    await saveCollection({ ...col, active: !col.active })
     toast(`Collection ${col.active ? 'disabled' : 'enabled'}.`, 'info')
   }
 

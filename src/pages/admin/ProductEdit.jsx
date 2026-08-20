@@ -82,7 +82,7 @@ export default function AdminProductEdit() {
     return Object.keys(e).length === 0
   }
 
-  const save = (statusOverride) => {
+  const save = async (statusOverride) => {
     if (!validate()) {
       toast('Please fix the highlighted fields.', 'error')
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -120,9 +120,13 @@ export default function AdminProductEdit() {
       },
     }
     delete payload.simpleStock
-    const saved = saveProduct(payload)
-    toast(existing ? 'Product updated.' : `Product “${saved.name}” created.`)
-    navigate('/admin/products')
+    try {
+      const saved = await saveProduct(payload)
+      toast(existing ? 'Product updated.' : `Product “${saved.name}” created.`)
+      navigate('/admin/products')
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const categories = getCategories()

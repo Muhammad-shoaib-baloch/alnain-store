@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { subscribe } from '@/lib/db'
 import { getProductById, variantPrice } from '@/services/catalog'
-import { validateCoupon } from '@/services/coupons'
+import { evaluateCoupon, requestCouponValidation } from '@/services/coupons'
 import { computeTotals } from '@/services/orders'
 import { uid } from '@/lib/format'
 import { trackEvent } from '@/lib/gtm'
@@ -16,9 +16,11 @@ export function useCart() {
 const readCart = () => {
   try {
     const raw = JSON.parse(localStorage.getItem(CART_KEY) || 'null')
-    return raw && Array.isArray(raw.items) ? raw : { items: [], couponCode: null }
+    if (!raw || !Array.isArray(raw.items)) return { items: [], coupon: null }
+    // migrate the old { couponCode } shape (no stored meta → drop the coupon)
+    return { items: raw.items, coupon: raw.coupon && raw.coupon.meta ? raw.coupon : null }
   } catch {
-    return { items: [], couponCode: null }
+    return { items: [], coupon: null }
   }
 }
 
@@ -57,14 +59,15 @@ export function CartProvider({ children }) {
   }, [state.items, dbVersion])
 
   const subtotal = detailed.reduce((s, it) => s + it.total, 0)
+  const couponItems = useMemo(
+    () => detailed.map((it) => ({ productId: it.productId, category: it.product.category, total: it.total })),
+    [detailed]
+  )
 
   const couponResult = useMemo(() => {
-    if (!state.couponCode) return null
-    return validateCoupon(state.couponCode, {
-      subtotal,
-      items: detailed.map((it) => ({ productId: it.productId, category: it.product.category, total: it.total })),
-    })
-  }, [state.couponCode, subtotal, detailed])
+    if (!state.coupon) return null
+    return evaluateCoupon(state.coupon.meta, subtotal, couponItems)
+  }, [state.coupon, subtotal, couponItems])
 
   const discount = couponResult?.ok ? couponResult.discount : 0
 
@@ -116,21 +119,23 @@ export function CartProvider({ children }) {
     setState((prev) => ({ ...prev, items: prev.items.filter((l) => l.id !== lineId) }))
   }, [])
 
-  const clear = useCallback(() => setState({ items: [], couponCode: null }), [])
+  const clear = useCallback(() => setState({ items: [], coupon: null }), [])
 
   const applyCoupon = useCallback(
-    (code) => {
-      const result = validateCoupon(code, {
-        subtotal,
-        items: detailed.map((it) => ({ productId: it.productId, category: it.product.category, total: it.total })),
-      })
-      if (result.ok) setState((prev) => ({ ...prev, couponCode: result.coupon.code }))
+    async (code) => {
+      const result = await requestCouponValidation(code, { subtotal, items: couponItems })
+      if (result.ok) {
+        setState((prev) => ({
+          ...prev,
+          coupon: { code: result.coupon?.code || String(code).toUpperCase().trim(), meta: result.coupon },
+        }))
+      }
       return result
     },
-    [subtotal, detailed]
+    [subtotal, couponItems]
   )
 
-  const removeCoupon = useCallback(() => setState((prev) => ({ ...prev, couponCode: null })), [])
+  const removeCoupon = useCallback(() => setState((prev) => ({ ...prev, coupon: null })), [])
 
   const value = useMemo(
     () => ({
@@ -138,7 +143,7 @@ export function CartProvider({ children }) {
       detailed,
       count: state.items.reduce((s, l) => s + l.qty, 0),
       subtotal,
-      couponCode: state.couponCode,
+      couponCode: state.coupon?.code || null,
       couponResult,
       discount,
       getTotals,
@@ -149,7 +154,7 @@ export function CartProvider({ children }) {
       applyCoupon,
       removeCoupon,
     }),
-    [state.items, state.couponCode, detailed, subtotal, couponResult, discount, getTotals, add, updateQty, remove, clear, applyCoupon, removeCoupon]
+    [state.items, state.coupon, detailed, subtotal, couponResult, discount, getTotals, add, updateQty, remove, clear, applyCoupon, removeCoupon]
   )
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>

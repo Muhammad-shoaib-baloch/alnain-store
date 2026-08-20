@@ -38,21 +38,25 @@ export default function ReviewsSection({ product, onSubmitted }) {
   const reviews = listProductReviews(product.id)
   const summary = reviewSummary(product)
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
     if (!form.text.trim()) return toast('Please write a few words about the product.', 'error')
-    addReview({
-      productId: product.id,
-      rating: form.rating,
-      title: form.title.trim(),
-      text: form.text.trim(),
-      customerName: user.name,
-      customerId: user.id,
-    })
-    setForm({ rating: 5, title: '', text: '' })
-    setShowForm(false)
-    toast('Thank you! Your review was submitted and is awaiting moderation.')
-    onSubmitted?.()
+    try {
+      await addReview({
+        productId: product.id,
+        rating: form.rating,
+        title: form.title.trim(),
+        text: form.text.trim(),
+        customerName: user.name,
+        customerId: user.id,
+      })
+      setForm({ rating: 5, title: '', text: '' })
+      setShowForm(false)
+      toast('Thank you! Your review was submitted and is awaiting moderation.')
+      onSubmitted?.()
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   return (

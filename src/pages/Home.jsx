@@ -134,10 +134,10 @@ function NewsletterBand() {
         </p>
         <form
           className="mt-6 flex w-full max-w-md"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault()
             try {
-              subscribeNewsletter(email)
+              await subscribeNewsletter(email)
               toast('Welcome to the list — you’ll hear from us soon.')
               setEmail('')
             } catch (err) {

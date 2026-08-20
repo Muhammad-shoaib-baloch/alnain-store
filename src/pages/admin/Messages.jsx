@@ -22,8 +22,8 @@ export default function AdminMessages() {
   const newCount = all.filter((m) => m.status === 'new').length
   const messages = tab === 'all' ? all : listMessages({ status: tab })
 
-  const markRead = (msg) => {
-    setMessageStatus(msg.id, msg.status === 'new' ? 'read' : 'new')
+  const markRead = async (msg) => {
+    await setMessageStatus(msg.id, msg.status === 'new' ? 'read' : 'new')
     toast(msg.status === 'new' ? 'Marked as read.' : 'Marked as unread.', 'info')
   }
 
@@ -33,7 +33,7 @@ export default function AdminMessages() {
       message: `From ${msg.name} (${msg.email}). This cannot be undone.`,
     })
     if (!ok) return
-    deleteMessage(msg.id)
+    await deleteMessage(msg.id)
     toast('Message deleted.', 'info')
   }
 

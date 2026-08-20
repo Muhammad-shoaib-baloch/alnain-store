@@ -43,28 +43,32 @@ export default function AdminBanners() {
 
   const openEdit = (b) => setEditing({ ...BLANK, ...b, startsAt: toDateInput(b.startsAt), endsAt: toDateInput(b.endsAt) })
 
-  const save = (e) => {
+  const save = async (e) => {
     e?.preventDefault()
     if (!editing.heading.trim()) return toast('Banner heading is required.', 'error')
-    saveBanner({
-      ...editing,
-      position: Number(editing.position) || 1,
-      startsAt: editing.startsAt ? new Date(editing.startsAt).toISOString() : null,
-      endsAt: editing.endsAt ? new Date(`${editing.endsAt}T23:59:59`).toISOString() : null,
-    })
-    toast(editing.id ? 'Banner updated.' : 'Banner created.')
-    setEditing(null)
+    try {
+      await saveBanner({
+        ...editing,
+        position: Number(editing.position) || 1,
+        startsAt: editing.startsAt ? new Date(editing.startsAt).toISOString() : null,
+        endsAt: editing.endsAt ? new Date(`${editing.endsAt}T23:59:59`).toISOString() : null,
+      })
+      toast(editing.id ? 'Banner updated.' : 'Banner created.')
+      setEditing(null)
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const remove = async (b) => {
     const ok = await confirm({ title: 'Delete this banner?', message: `“${b.heading}” will be removed from the homepage.` })
     if (!ok) return
-    deleteBanner(b.id)
+    await deleteBanner(b.id)
     toast('Banner deleted.', 'info')
   }
 
-  const toggleActive = (b) => {
-    saveBanner({ ...b, active: !b.active })
+  const toggleActive = async (b) => {
+    await saveBanner({ ...b, active: !b.active })
     toast(`Banner ${b.active ? 'deactivated' : 'activated'}.`, 'info')
   }
 

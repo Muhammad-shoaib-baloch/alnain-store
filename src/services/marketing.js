@@ -1,4 +1,5 @@
-import { getDB, commit } from '@/lib/db'
+import { getDB, commit, isLive, rehydrate } from '@/lib/db'
+import { api, materializeImage } from '@/lib/api'
 import { uid } from '@/lib/format'
 
 // ------------------------------------------------------------- banners
@@ -17,7 +18,13 @@ export function getBanners({ placement, activeOnly = false } = {}) {
   return banners
 }
 
-export function saveBanner(data) {
+export async function saveBanner(data) {
+  if (isLive()) {
+    const payload = { ...data, image: await materializeImage(data.image) }
+    await api('/admin/banners', { method: 'POST', body: payload })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   if (data.id) {
     const existing = db.banners.find((b) => b.id === data.id)
@@ -43,7 +50,12 @@ export function saveBanner(data) {
   commit()
 }
 
-export function deleteBanner(id) {
+export async function deleteBanner(id) {
+  if (isLive()) {
+    await api(`/admin/banners/${id}`, { method: 'DELETE' })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   db.banners = db.banners.filter((b) => b.id !== id)
   commit()
@@ -56,7 +68,23 @@ export function getSocialLinks({ activeOnly = false } = {}) {
   return links
 }
 
-export function saveSocialLink(data) {
+async function putSocialLinks(links) {
+  await api('/admin/social', { method: 'PUT', body: { links } })
+  await rehydrate()
+}
+
+export async function saveSocialLink(data) {
+  if (isLive()) {
+    const links = getSocialLinks().map((l) => ({ ...l }))
+    if (data.id) {
+      const existing = links.find((l) => l.id === data.id)
+      if (existing) Object.assign(existing, data)
+    } else {
+      links.push({ platform: 'instagram', label: '', url: '', active: true, order: links.length + 1, ...data })
+    }
+    await putSocialLinks(links)
+    return
+  }
   const db = getDB()
   if (data.id) {
     const existing = db.socialLinks.find((l) => l.id === data.id)
@@ -75,13 +103,26 @@ export function saveSocialLink(data) {
   commit()
 }
 
-export function deleteSocialLink(id) {
+export async function deleteSocialLink(id) {
+  if (isLive()) {
+    await putSocialLinks(getSocialLinks().filter((l) => l.id !== id))
+    return
+  }
   const db = getDB()
   db.socialLinks = db.socialLinks.filter((l) => l.id !== id)
   commit()
 }
 
-export function moveSocialLink(id, direction) {
+export async function moveSocialLink(id, direction) {
+  if (isLive()) {
+    const sorted = getSocialLinks().map((l) => ({ ...l }))
+    const idx = sorted.findIndex((l) => l.id === id)
+    const swapIdx = idx + (direction === 'up' ? -1 : 1)
+    if (idx < 0 || swapIdx < 0 || swapIdx >= sorted.length) return
+    ;[sorted[idx].order, sorted[swapIdx].order] = [sorted[swapIdx].order, sorted[idx].order]
+    await putSocialLinks(sorted)
+    return
+  }
   const db = getDB()
   const sorted = [...db.socialLinks].sort((a, b) => a.order - b.order)
   const idx = sorted.findIndex((l) => l.id === id)
@@ -94,9 +135,13 @@ export function moveSocialLink(id, direction) {
 }
 
 // ------------------------------------------------------------- contact messages
-export function submitContactMessage({ name, email, message }) {
+export async function submitContactMessage({ name, email, message }) {
   if (!name?.trim() || !message?.trim()) throw new Error('Please fill in your name and message.')
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email))) throw new Error('Please enter a valid email address.')
+  if (isLive()) {
+    const res = await api('/messages', { method: 'POST', body: { name, email, message } })
+    return res.message
+  }
   const db = getDB()
   db.messages = db.messages || []
   const entry = {
@@ -118,7 +163,12 @@ export function listMessages({ status } = {}) {
   return items
 }
 
-export function setMessageStatus(id, status) {
+export async function setMessageStatus(id, status) {
+  if (isLive()) {
+    await api(`/admin/messages/${id}`, { method: 'PATCH', body: { status } })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   const msg = (db.messages || []).find((m) => m.id === id)
   if (msg) {
@@ -127,7 +177,12 @@ export function setMessageStatus(id, status) {
   }
 }
 
-export function deleteMessage(id) {
+export async function deleteMessage(id) {
+  if (isLive()) {
+    await api(`/admin/messages/${id}`, { method: 'DELETE' })
+    await rehydrate()
+    return
+  }
   const db = getDB()
   db.messages = (db.messages || []).filter((m) => m.id !== id)
   commit()
@@ -138,10 +193,14 @@ export function getTestimonials() {
   return getDB().testimonials
 }
 
-export function subscribeNewsletter(email) {
-  const db = getDB()
+export async function subscribeNewsletter(email) {
   const clean = String(email).toLowerCase().trim()
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)) throw new Error('Please enter a valid email address.')
+  if (isLive()) {
+    await api('/newsletter', { method: 'POST', body: { email: clean } })
+    return
+  }
+  const db = getDB()
   if (db.newsletter.includes(clean)) throw new Error('You are already subscribed.')
   db.newsletter.push(clean)
   commit()

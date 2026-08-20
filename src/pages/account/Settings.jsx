@@ -21,12 +21,16 @@ export default function AccountSettings() {
     whatsapp: user.prefs?.whatsapp ?? true,
   })
 
-  const savePref = (key, value) => {
+  const savePref = async (key, value) => {
     const next = { ...prefs, [key]: value }
     setPrefs(next)
-    updateUser(user.id, { prefs: next })
-    refresh()
-    toast('Preference saved.', 'info')
+    try {
+      await updateUser(user.id, { prefs: next })
+      refresh()
+      toast('Preference saved.', 'info')
+    } catch (err) {
+      toast(err.message, 'error')
+    }
   }
 
   const deleteAccount = async () => {
@@ -36,8 +40,12 @@ export default function AccountSettings() {
       confirmText: 'Delete Account',
     })
     if (!ok) return
-    setCustomerStatus(user.id, 'disabled')
-    logout()
+    try {
+      await setCustomerStatus(user.id, 'disabled')
+    } catch {
+      /* proceed to sign out regardless */
+    }
+    await logout()
     toast('Your account has been deactivated.', 'info')
     navigate('/')
   }

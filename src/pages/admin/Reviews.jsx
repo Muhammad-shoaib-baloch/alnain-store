@@ -31,15 +31,15 @@ export default function AdminReviews() {
   }
   const reviews = listAllReviews({ status: tab === 'all' ? '' : tab, rating })
 
-  const act = (review, status) => {
-    setReviewStatus(review.id, status)
+  const act = async (review, status) => {
+    await setReviewStatus(review.id, status)
     toast(`Review ${status}.`, status === 'approved' ? 'success' : 'info')
   }
 
   const remove = async (review) => {
     const ok = await confirm({ title: 'Delete this review?', message: `By ${review.customerName} on ${review.product?.name || 'a product'}.` })
     if (!ok) return
-    deleteReview(review.id)
+    await deleteReview(review.id)
     toast('Review deleted.', 'info')
   }
 

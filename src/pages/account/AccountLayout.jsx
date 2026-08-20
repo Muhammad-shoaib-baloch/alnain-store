@@ -18,8 +18,8 @@ export default function AccountLayout() {
   const toast = useToast()
   const navigate = useNavigate()
 
-  const handleLogout = () => {
-    logout()
+  const handleLogout = async () => {
+    await logout()
     toast('You have been signed out.', 'info')
     navigate('/')
   }

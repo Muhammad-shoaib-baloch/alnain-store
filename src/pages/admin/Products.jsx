@@ -47,12 +47,12 @@ export default function AdminProducts() {
       message: `“${product.name}” and its ${product.variants.length} variation(s) will be permanently removed.`,
     })
     if (!ok) return
-    deleteProduct(product.id)
+    await deleteProduct(product.id)
     toast('Product deleted.', 'info')
   }
 
-  const handleDuplicate = (product) => {
-    const copy = duplicateProduct(product.id)
+  const handleDuplicate = async (product) => {
+    const copy = await duplicateProduct(product.id)
     toast(`Duplicated as draft — “${copy.name}”.`)
     navigate(`/admin/products/${copy.id}/edit`)
   }

@@ -22,22 +22,22 @@ export default function SocialLinksManager() {
 
   const links = getSocialLinks()
 
-  const addLink = () => {
+  const addLink = async () => {
     const used = links.map((l) => l.platform)
     const platform = SOCIAL_PLATFORMS.find((p) => !used.includes(p.value)) || SOCIAL_PLATFORMS[0]
-    saveSocialLink({ platform: platform.value, label: platform.label, url: '', active: false })
+    await saveSocialLink({ platform: platform.value, label: platform.label, url: '', active: false })
     toast(`${platform.label} added — paste the profile URL and activate it.`, 'info')
   }
 
-  const setPlatform = (link, platform) => {
+  const setPlatform = async (link, platform) => {
     const meta = SOCIAL_PLATFORMS.find((p) => p.value === platform)
-    saveSocialLink({ ...link, platform, label: meta?.label || platform })
+    await saveSocialLink({ ...link, platform, label: meta?.label || platform })
   }
 
-  const commitUrl = (link) => {
+  const commitUrl = async (link) => {
     const draft = drafts[link.id]
     if (draft === undefined || draft === link.url) return
-    saveSocialLink({ ...link, url: draft.trim() })
+    await saveSocialLink({ ...link, url: draft.trim() })
     setDrafts((d) => {
       const next = { ...d }
       delete next[link.id]
@@ -46,16 +46,16 @@ export default function SocialLinksManager() {
     toast(`${link.label} URL saved.`)
   }
 
-  const toggleActive = (link, active) => {
+  const toggleActive = async (link, active) => {
     if (active && !(drafts[link.id] ?? link.url).trim()) return toast('Add the profile URL before activating.', 'error')
-    saveSocialLink({ ...link, active })
+    await saveSocialLink({ ...link, active })
     toast(`${link.label} ${active ? 'is now visible on the storefront' : 'hidden from the storefront'}.`, 'info')
   }
 
   const remove = async (link) => {
     const ok = await confirm({ title: `Remove ${link.label}?`, message: 'It will disappear from the footer and social sections.' })
     if (!ok) return
-    deleteSocialLink(link.id)
+    await deleteSocialLink(link.id)
     toast('Social link removed.', 'info')
   }
 
