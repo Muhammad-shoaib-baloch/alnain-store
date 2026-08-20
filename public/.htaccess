@@ -20,5 +20,12 @@
   ExpiresByType application/javascript "access plus 7 days"
 </IfModule>
 
+# index.html must always be revalidated (it points at hashed assets)
+<IfModule mod_headers.c>
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
 # Basic hardening
 Options -Indexes

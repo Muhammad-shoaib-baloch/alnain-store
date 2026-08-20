@@ -59,7 +59,8 @@ function fromSnapshot(snap) {
 /** Boot: try the API; fall back to the local demo database. */
 export async function initDB() {
   try {
-    const snap = await api('/snapshot', { timeout: 8000 })
+    // ts param busts any CDN/browser cache so data is always fresh
+    const snap = await api('/snapshot?ts=' + Date.now(), { timeout: 8000 })
     if (!snap || snap.live !== true) throw new Error('bad snapshot')
     cache = fromSnapshot(snap)
     live = true
@@ -90,7 +91,7 @@ export async function rehydrate() {
     return
   }
   try {
-    const snap = await api('/snapshot')
+    const snap = await api('/snapshot?ts=' + Date.now())
     const me = cache?.me
     cache = fromSnapshot(snap)
     if (!cache.me && me && !localStorage.getItem('alnain_token')) cache.me = null
