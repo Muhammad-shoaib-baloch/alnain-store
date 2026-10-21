@@ -14,12 +14,6 @@ npm install
 npm run dev        # http://localhost:5173
 ```
 
-## Demo accounts
-
-| Role     | Email             | Password    |
-| -------- | ----------------- | ----------- |
-| Admin    | admin@alnain.pk   | admin123    |
-| Customer | sara@example.com  | customer123 |
 
 (One-click demo login buttons are on the `/login` page.)
 
